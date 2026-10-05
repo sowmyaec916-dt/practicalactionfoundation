@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Practical Action Foundation works with communities, institutions, enterprises and funders to build practical, lasting solutions across food systems, climate resilience, energy, WASH and inclusive economies in India." />
+  <meta name="theme-color" content="#173D2C" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>Practical Action Foundation | Practical solutions. Lasting impact.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <style>
+    :root {
+      --brand-primary: #004C6D;
+      --brand-secondary: #0A667A;
+      --brand-accent: #30C876;
+      --brand-highlight: #8AD9AD;
+      --brand-teal: #2F7D6D;
+      --accent-ink: #A94300;
+      --teal-ink: #004C6D;
+      --surface-light: #fffefa;
+      --surface-warm: #f7f3ea;
+      --surface-mint: #E2EFDA;
+      --surface-tint: #f2edf6;
+      --surface-white: #ffffff;
+      --text-primary: #1d2529;
+      --text-secondary: #53636a;
+      --text-on-dark: #ffffff;
+      --text-on-dark-2: #d8eaf1;
+      --line: #d9e2e5;
+      --line-strong: #a7b8bf;
+      --line-on-dark: rgba(255, 255, 255, .2);
+      --numeral: rgba(0, 76, 109, .12);
+      --numeral-dark: rgba(247, 179, 21, .24);
+      --font: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --fs-h1: clamp(2.6rem, 4.7vw, 4.3rem);
+      --fs-h2: clamp(1.9rem, 3.3vw, 2.9rem);
+      --fs-theme: clamp(2rem, 3.4vw, 2.9rem);
+      --fs-h3: 1.28rem;
+      --fs-lead: clamp(1.06rem, 1.3vw, 1.2rem);
+      --fs-body: 1.0625rem;
+      --fs-small: .92rem;
+      --fs-label: .76rem;
+      --s-1: 8px; --s-2: 16px; --s-3: 24px; --s-4: 32px; --s-5: 48px; --s-6: 64px; --s-7: 88px;
+      --sec-pad: var(--s-7);
+      --r-xs: 2px; --r-sm: 6px; --r-md: 10px;
+      --container: 1240px;
+      --gutter: 20px;
+      --header-h: 76px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+      --t-fast: .25s;
+      --t-med: .45s;
+      --t-slow: .8s;
+    }
+
+    @view-transition { navigation: auto; }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* Extended Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--surface-light);
+      color: var(--text-primary);
+      font-family: var(--font);
+      font-size: var(--fs-body);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+      transition: background-color var(--t-med) var(--ease);
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { margin: 0 0 var(--s-2); font-weight: 700; }
+    h1 { font-size: var(--fs-h1); line-height: 1.04; letter-spacing: -.035em; font-weight: 800; }
+    h2 { font-size: var(--fs-h2); line-height: 1.1; letter-spacing: -.025em; max-width: 22ch; }
+    h3 { font-size: var(--fs-h3); line-height: 1.25; letter-spacing: -.01em; }
+    h4 { font-size: 1rem; line-height: 1.35; }
+    p { margin: 0 0 var(--s-2); }
+    ul, ol, dl, dd { margin: 0; padding: 0; }
+    figure { margin: 0; }
+    table { border-collapse: collapse; }
+
+    /* Global Selection Effect */
+    ::selection {
+      background: var(--brand-accent);
+      color: #0b2d20;
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    .skip-link {
+      position: absolute; left: var(--s-2); top: -80px; z-index: 100;
+      background: var(--brand-primary); color: #fff; padding: 10px 16px;
+      border-radius: var(--r-sm); font-weight: 700;
+    }
+    .skip-link:focus { top: var(--s-2); }
+
+    :focus-visible {
+      outline: 3px solid var(--brand-accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .wrap {
+      width: min(var(--container), calc(100% - 2 * var(--gutter)));
+      margin-inline: auto;
+    }
+
+    .section { padding: var(--sec-pad) 0; position: relative; }
+    .section--sand { background: var(--surface-warm); }
+    .section--dark { background: var(--brand-primary); color: var(--text-on-dark); }
+
+    .sec-head {
+      position: relative;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: var(--s-4);
+      margin-bottom: var(--s-6);
+    }
+    .sec-head::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: calc(-1 * var(--sec-pad));
+      height: calc(var(--sec-pad) - 12px);
+      width: 1px;
+      background: var(--line-strong);
+    }
+
+    .sec-num::before, .theme-num::before, .story-num::before { content: attr(data-num); }
+    .sec-num {
+      font-size: clamp(4.2rem, 8vw, 7.5rem);
+      font-weight: 800;
+      line-height: .8;
+      letter-spacing: -.05em;
+      color: var(--numeral);
+      user-select: none;
+    }
+    .sec-head .lead { max-width: 64ch; margin: 0; }
+    .sec-head--dark::before { background: var(--line-on-dark); }
+    .sec-head--dark .sec-num { color: var(--numeral-dark); }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: var(--fs-label);
+      font-weight: 600;
+      color: var(--teal-ink);
+      margin-bottom: 12px;
+    }
+    .section--dark .eyebrow { color: var(--brand-highlight); }
+
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: var(--fs-label);
+      font-weight: 700;
+      color: var(--accent-ink);
+      margin-bottom: 8px;
+    }
+
+    .lead { font-size: var(--fs-lead); color: var(--text-secondary); line-height: 1.6; }
+    .section--dark .lead { color: var(--text-on-dark-2); }
+
+    .fig-note { font-size: .82rem; color: var(--text-secondary); margin-top: 12px; }
+    .tech-caption {
+      display: flex; gap: 10px; align-items: baseline;
+      font-size: .82rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.45;
+    }
+    .tc-mark {
+      flex: none; width: 22px; height: 2px;
+      background: var(--brand-accent); transform: translateY(-3px);
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 50px; padding: 12px 24px; border-radius: var(--r-sm);
+      border: 1.5px solid var(--brand-primary); font-weight: 600; font-size: 1rem;
+      text-decoration: none;
+      transition: all var(--t-fast) var(--ease);
+      cursor: pointer;
+    }
+    .btn--dark { background: var(--brand-accent); border-color: var(--brand-accent); color: var(--text-primary); }
+    .btn--dark:hover {
+      background: var(--brand-highlight);
+      border-color: var(--brand-highlight);
+      color: var(--text-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(48, 200, 118, 0.35);
+    }
+    .btn--line { background: transparent; color: var(--text-primary); }
+    .btn--line:hover {
+      background: var(--brand-primary);
+      color: var(--text-on-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(23, 61, 44, 0.2);
+    }
+    .btn-arrow { transition: transform var(--t-fast) var(--ease); }
+    .btn:hover .btn-arrow { transform: translateX(6px); }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 50; background: rgba(255, 253, 248, .0);
+      border-bottom: 1px solid transparent;
+      transition: background-color var(--t-med) var(--ease), border-color var(--t-med), box-shadow var(--t-med);
+    }
+    .site-header.is-scrolled {
+      background: rgba(255, 253, 248, .97);
+      border-bottom-color: var(--line);
+      box-shadow: 0 6px 24px rgba(11, 45, 39, .05);
+    }
+    html:not(.js) .site-header { background: var(--surface-light); border-bottom-color: var(--line); }
+
+    .header-bar { height: var(--header-h); display: flex; align-items: center; gap: var(--s-3); transition: height var(--t-med) var(--ease); }
+    .is-scrolled .header-bar { height: 64px; }
+
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 700; white-space: nowrap; line-height: 1.15; font-size: 1rem; }
+    .brand-logo { transition: transform var(--t-fast) var(--ease); }
+    .brand:hover .brand-logo { transform: scale(1.03); }
+
+    .site-nav { position: relative; margin-left: auto; }
+    .nav-list { list-style: none; display: flex; align-items: center; gap: 4px; }
+    .nav-link {
+      display: block; padding: 10px 14px; font-size: .92rem; font-weight: 600;
+      color: var(--text-secondary); text-decoration: none; border-radius: var(--r-sm);
+      transition: all var(--t-fast) var(--ease);
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--brand-primary);
+      background: rgba(48, 200, 118, 0.12);
+      transform: translateY(-2px);
+    }
+    .nav-link--cta {
+      margin-left: 10px; border: 1.5px solid var(--brand-accent);
+      border-radius: var(--r-sm); color: var(--text-primary); padding: 8px 14px;
+    }
+    .nav-link--cta:hover, .nav-link--cta.active {
+      background: var(--brand-accent);
+      color: var(--text-primary);
+      box-shadow: 0 4px 12px rgba(48, 200, 118, 0.28);
+    }
+    .nav-indicator {
+      position: absolute; left: 0; bottom: 2px; height: 2px; width: 0;
+      background: var(--brand-accent); opacity: 0;
+      transition: transform var(--t-med) var(--ease), width var(--t-med) var(--ease), opacity var(--t-fast);
+      pointer-events: none;
+    }
+
+    .menu-toggle {
+      display: none; margin-left: auto; position: relative; z-index: 60;
+      align-items: center; gap: 10px; min-height: 44px; padding: 8px 14px;
+      border: 1.5px solid var(--line); border-radius: var(--r-sm);
+      background: var(--surface-light); font: inherit; font-weight: 600;
+      font-size: .95rem; color: var(--text-primary); cursor: pointer;
+    }
+    .menu-toggle-bars, .menu-toggle-bars::before, .menu-toggle-bars::after {
+      display: block; width: 18px; height: 2px; background: currentColor;
+      border-radius: 2px; position: relative; transition: transform var(--t-fast) var(--ease), background-color var(--t-fast);
+    }
+    .menu-toggle-bars::before, .menu-toggle-bars::after { content: ""; position: absolute; left: 0; }
+    .menu-toggle-bars::before { top: -6px; }
+    .menu-toggle-bars::after { top: 6px; }
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bars { background: transparent; }
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bars::before { transform: translateY(6px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bars::after { transform: translateY(-6px) rotate(-45deg); }
+    .nav-scrim { display: none; }
+
+    .hero { position: relative; padding-top: var(--s-5); overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; left: max(-60px, calc((100vw - var(--container)) / 2 - 220px));
+      top: 8px; width: 520px; height: 340px;
+      background: radial-gradient(circle at 50% 50%, rgba(48,200,118,.12) 0 22%, rgba(48,200,118,.045) 22% 45%, transparent 45%);
+      opacity: 1; pointer-events: none;
+    }
+    .hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--s-6); align-items: stretch; }
+    .hero-copy { padding: var(--s-5) 0 var(--s-4); display: flex; flex-direction: column; }
+    .hero h1 { margin-bottom: var(--s-3); }
+    .hero h1::after { content: ""; display: block; width: 88px; height: 7px; margin-top: 24px; background: var(--brand-highlight); border-radius: 1px; }
+    .h1-accent { display: block; color: var(--teal-ink); }
+    .hero-lead { font-size: 1.16rem; color: var(--text-secondary); max-width: 46ch; margin-bottom: var(--s-4); }
+    .logic-line { margin: auto 0 0; padding-top: var(--s-5); }
+    .logic-label { display: block; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .12em; font-weight: 600; color: var(--text-secondary); padding-top: 14px; border-top: 1px solid var(--line); margin-bottom: 6px; }
+    .logic-terms { font-weight: 600; font-size: 1.02rem; }
+    .logic-terms i { font-style: normal; color: var(--accent-ink); font-weight: 700; padding: 0 3px; }
+
+    .hero-media { margin-right: calc((100vw - min(var(--container), 100vw - 2 * var(--gutter))) / -2); position: relative; display: flex; flex-direction: column; }
+    .hero-media img { width: 100%; height: 100%; min-height: 520px; max-height: 680px; object-fit: cover; object-position: 50% 58%; border-radius: var(--r-sm); }
+    .hero-media .tech-caption { margin: 0; padding: 12px 0 18px; }
+
+    /* Auto Slow Sliding Carousel for Themes Strip under Our Work */
+    .theme-slider-container {
+      width: 100%;
+      overflow: hidden;
+      margin-top: var(--s-4);
+      margin-bottom: var(--s-5);
+      border-top: 1px solid var(--brand-primary);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-warm);
+      position: relative;
+    }
+    .theme-slider-track {
+      display: flex;
+      width: max-content;
+      animation: slowThemeSlide 32s linear infinite;
+    }
+    .theme-slider-container:hover .theme-slider-track {
+      animation-play-state: paused;
+    }
+    @keyframes slowThemeSlide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .theme-slider-group {
+      display: flex;
+      flex-shrink: 0;
+    }
+    .theme-slider-group a {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 20px 32px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-right: 1px solid var(--line);
+      white-space: nowrap;
+      transition: all var(--t-fast) var(--ease);
+      background: transparent;
+    }
+    .theme-slider-group a:hover {
+      background: #ffffff;
+      color: var(--brand-primary);
+      box-shadow: inset 0 -3px 0 var(--brand-accent);
+    }
+    .ts-num { font-size: .82rem; font-weight: 800; color: var(--accent-ink); }
+
+    .system { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--s-6); align-items: center; }
+    .system-svg { width: 100%; height: auto; overflow: visible; }
+    .sys-path, .sys-out { fill: none; stroke: var(--line-strong); stroke-width: 1.5; transition: stroke var(--t-fast), stroke-width var(--t-fast), opacity var(--t-fast); }
+    .sys-out { stroke: var(--brand-primary); stroke-width: 2.5; }
+    .sys-node circle { fill: var(--surface-warm); stroke: var(--brand-secondary); stroke-width: 2; transition: all var(--t-fast); }
+    .sys-node text { font-family: var(--font); font-size: 17px; font-weight: 600; fill: var(--text-primary); text-anchor: end; }
+    .sys-hub { fill: var(--brand-accent); }
+    .sys-hub-label { font-family: var(--font); font-size: 14px; font-weight: 600; fill: var(--text-secondary); text-anchor: middle; }
+    .sys-goal { fill: var(--brand-primary); stroke: var(--brand-highlight); stroke-width: 4; }
+    .sys-goal-label { font-family: var(--font-size); font-size: 17px; font-weight: 700; fill: var(--text-primary); text-anchor: end; }
+
+    .system[data-active] .sys-path { opacity: .3; }
+    .system[data-active="1"] .sys-path[data-node="1"],
+    .system[data-active="2"] .sys-path[data-node="2"],
+    .system[data-active="3"] .sys-path[data-node="3"],
+    .system[data-active="4"] .sys-path[data-node="4"],
+    .system[data-active="5"] .sys-path[data-node="5"],
+    .system[data-active="6"] .sys-path[data-node="6"] { opacity: 1; stroke: var(--brand-accent); stroke-width: 3; }
+
+    .system[data-active="1"] .sys-node[data-node="1"] circle,
+    .system[data-active="2"] .sys-node[data-node="2"] circle,
+    .system[data-active="3"] .sys-node[data-node="3"] circle,
+    .system[data-active="4"] .sys-node[data-node="4"] circle,
+    .system[data-active="5"] .sys-node[data-node="5"] circle,
+    .system[data-active="6"] .sys-node[data-node="6"] circle { fill: var(--brand-accent); }
+
+    .system-list { list-style: none; }
+    .system-list li {
+      display: grid; grid-template-columns: 120px minmax(0, 1fr);
+      gap: var(--s-2); padding: 14px 12px; border-top: 1px solid var(--line-strong);
+      cursor: pointer; position: relative; transition: all var(--t-fast) var(--ease);
+      border-radius: var(--r-xs);
+    }
+    .system-list li:hover {
+      background: rgba(48, 200, 118, 0.08);
+      transform: translateX(6px);
+    }
+    .system-list li:last-child { border-bottom: 1px solid var(--line-strong); }
+    .system-list li::before {
+      content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 4px;
+      background: var(--brand-accent); transform: scaleY(0); transition: transform var(--t-fast) var(--ease);
+    }
+    .system-list li.is-active::before, .system-list li:hover::before { transform: scaleY(1); }
+    .system-list b { font-weight: 700; }
+    .system-list span { color: var(--text-secondary); font-size: var(--fs-small); line-height: 1.5; }
+
+    .principles { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-4); margin-top: var(--s-6); }
+    .principles li {
+      border-top: 2px solid var(--brand-primary); padding: var(--s-3) var(--s-2);
+      border-radius: var(--r-xs); transition: all var(--t-fast) var(--ease);
+    }
+    .principles li:hover {
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(23,61,44,.06);
+      transform: translateY(-4px);
+      border-top-color: var(--brand-accent);
+    }
+    .pr-num { display: block; font-weight: 700; color: var(--accent-ink); font-size: .85rem; margin-bottom: 6px; }
+    .principles h3 { font-size: 1.08rem; margin-bottom: 6px; }
+    .principles p { color: var(--text-secondary); font-size: var(--fs-small); margin: 0; }
+
+    .work { padding-bottom: 0; }
+    .work > .wrap .sec-head { margin-bottom: var(--s-4); }
+
+    .theme { padding: var(--s-7) 0; border-top: 1px solid var(--line); }
+    .theme--food { background: var(--surface-light); }
+    .theme--climate { background: var(--brand-primary); color: var(--text-on-dark); border-top: 0; }
+    .theme--energy { background: var(--surface-mint); border-top: 0; }
+    .theme--economy { background: var(--surface-tint); border-top: 0; }
+
+    .theme-head { display: grid; grid-template-columns: 110px minmax(0, .9fr) minmax(0, 1.3fr); gap: var(--s-4); align-items: start; margin-bottom: var(--s-5); }
+    .theme-num { font-size: clamp(3.6rem, 6vw, 5.6rem); font-weight: 800; line-height: .82; letter-spacing: -.05em; color: var(--numeral); }
+    .theme-title { font-size: var(--fs-theme); line-height: 1.05; letter-spacing: -.03em; font-weight: 800; margin: 0; }
+    .theme-why p:last-child { margin: 0; }
+    .theme-why p:not(.kicker) { font-size: 1.04rem; color: var(--text-secondary); }
+
+    .theme-body { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: var(--s-6); align-items: start; margin-top: var(--s-5); }
+    .theme-body--flip .theme-photo { order: -1; }
+    .theme-body--flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); }
+    .theme-photo { overflow: hidden; border-radius: var(--r-sm); }
+    .theme-photo img { width: 100%; aspect-ratio: 4 / 5; max-height: 560px; object-fit: cover; object-position: 50% 30%; border-radius: var(--r-xs); transition: transform var(--t-med) var(--ease); }
+    .theme-photo:hover img { transform: scale(1.03); }
+
+    .scope-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4) var(--s-4); }
+    .scope-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .theme-body .scope-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .scope-grid h4 { padding-top: 10px; border-top: 2px solid var(--brand-teal); margin-bottom: 8px; font-size: .98rem; }
+    .scope-grid ul { list-style: none; }
+    .scope-grid li { font-size: var(--fs-small); color: var(--text-secondary); padding: 3px 0; line-height: 1.45; }
+
+    /* Work in Practice: Permanent Visible Display */
+    .practice-block {
+      margin-top: var(--s-5);
+      padding: var(--s-4);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      box-shadow: 0 4px 16px rgba(23,61,44,.03);
+    }
+    .theme--climate .practice-block {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--line-on-dark);
+    }
+    .practice-block-header {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+      margin-bottom: var(--s-3);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--brand-accent);
+      display: inline-block;
+    }
+    .theme--climate .practice-block-header {
+      color: #ffffff;
+      border-bottom-color: var(--brand-highlight);
+    }
+    .practice-cols { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--s-6); }
+    .practice-cols--single { grid-template-columns: 1fr; }
+    .practice-label { display: flex; align-items: center; gap: 10px; font-size: .95rem; margin-bottom: 4px; }
+    .practice-label::before { content: ""; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--brand-secondary); }
+    .practice-label--current::before { background: var(--brand-accent); border-color: var(--brand-accent); }
+
+    .practice-list { list-style: none; }
+    .practice-list--two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-5); }
+    .practice-list li {
+      padding: 16px 12px; border-top: 1px solid var(--line-strong);
+      border-radius: var(--r-xs); transition: all var(--t-fast) var(--ease);
+    }
+    .practice-list li:hover {
+      background: rgba(48, 200, 118, 0.08);
+      transform: translateX(4px);
+    }
+    .practice-list b { display: block; font-weight: 700; line-height: 1.35; }
+    .pl-meta { display: block; font-size: .84rem; font-weight: 600; color: var(--teal-ink); margin: 3px 0 6px; }
+    .practice-list p { font-size: var(--fs-small); color: var(--text-secondary); margin: 0; line-height: 1.55; }
+
+    .theme--climate .theme-num { color: var(--numeral-dark); }
+    .theme--climate .eyebrow, .theme--climate .pl-meta { color: var(--brand-highlight); }
+    .theme--climate .kicker { color: var(--brand-accent); }
+    .theme--climate .theme-why p:not(.kicker), .theme--climate .scope-grid li,
+    .theme--climate .practice-list p, .theme--climate .tech-caption,
+    .theme--climate .flow span, .theme--climate .flow-support { color: var(--text-on-dark-2); }
+    .theme--climate .scope-grid h4 { border-top-color: var(--brand-highlight); }
+    .theme--climate .practice-list li, .theme--climate .flow-support { border-color: var(--line-on-dark); }
+    .theme--climate .practice-label::before { border-color: var(--brand-highlight); }
+    .theme--climate .practice-label--current::before { background: var(--brand-accent); border-color: var(--brand-accent); }
+    .theme--climate .flow li::before { background: var(--line-on-dark); }
+    .theme--climate .flow-node { background: var(--brand-primary); border-color: var(--brand-highlight); }
+    .theme--climate .flow-node--goal { background: var(--brand-highlight); }
+
+    .flow-figure { margin-bottom: var(--s-2); }
+    .flow { list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
+    .flow li { position: relative; padding: 36px 20px 0 0; }
+    .flow li::before { content: ""; position: absolute; left: 20px; right: 0; top: 9px; height: 2px; background: var(--line-strong); transform-origin: left center; }
+    .flow li:last-child::before { display: none; }
+    .flow li::after { content: ""; position: absolute; right: 2px; top: 5px; width: 8px; height: 8px; border-top: 2px solid var(--line-strong); border-right: 2px solid var(--line-strong); transform: rotate(45deg); }
+    .flow li:last-child::after { display: none; }
+    .theme--climate .flow li::after { border-color: var(--line-on-dark); }
+
+    .flow-node { position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--brand-secondary); background: var(--surface-light); }
+    .flow-node--goal { background: var(--brand-primary); border-color: var(--brand-primary); }
+    .flow-node--hazard { background: var(--brand-accent); border-color: var(--brand-accent); }
+    .flow-node--act { background: var(--brand-highlight); border-color: var(--brand-highlight); }
+    .theme--energy .flow-node, .theme--economy .flow-node { background: transparent; }
+    .theme--economy .flow-node--goal { background: var(--brand-primary); }
+
+    .flow b { display: block; font-weight: 700; font-size: 1.02rem; line-height: 1.3; margin-bottom: 4px; }
+    .flow span { display: block; font-size: .86rem; color: var(--text-secondary); line-height: 1.45; }
+    .flow-support { margin-top: var(--s-3); padding-top: 12px; border-top: 1px dashed var(--line-strong); font-size: .92rem; color: var(--text-secondary); }
+    .flow-support > span:first-child { font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--text-primary); margin-right: 8px; }
+    .theme--climate .flow-support > span:first-child { color: var(--text-on-dark); }
+    .flow-support i { font-style: normal; color: var(--accent-ink); padding: 0 4px; }
+    .theme--climate .flow-support i { color: var(--brand-accent); }
+    .flow-support--dual > span:first-child { margin-right: 6px; }
+
+    .fs-line { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--text-primary); }
+    .fs-line::before { content: ""; width: 26px; height: 3px; background: var(--brand-teal); }
+    .fs-line--green { margin-left: var(--s-3); }
+    .fs-line--green::before { background: var(--brand-secondary); }
+    .fs-line--inclusion::before { background: var(--brand-accent); }
+
+    .services { margin-bottom: var(--s-2); }
+    .services-row { display: grid; grid-template-columns: 1fr 44px 1fr 44px 1fr 44px 1fr; align-items: start; }
+    .svc { border-top: 3px solid var(--brand-secondary); padding-top: 14px; }
+    .svc--goal { border-top-color: var(--brand-accent); }
+    .svc-tag { display: block; font-weight: 800; font-size: 1.15rem; letter-spacing: -.01em; margin-bottom: 6px; }
+    .svc p { font-size: .9rem; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+    .svc i { font-style: normal; color: var(--accent-ink); }
+    .svc-link { position: relative; height: 3px; margin-top: 0; }
+    .svc-link::before { content: ""; position: absolute; left: 6px; right: 8px; top: 0; height: 2px; background: var(--brand-secondary); transform-origin: left; }
+    .svc-link::after { content: ""; position: absolute; right: 6px; top: -4px; width: 8px; height: 8px; border-top: 2px solid var(--brand-secondary); border-right: 2px solid var(--brand-secondary); transform: rotate(45deg); }
+
+    .chain { margin-top: var(--s-4); padding: 18px 22px; background: var(--surface-white); border: 1px solid var(--line); border-radius: var(--r-sm); }
+    .chain-title { font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--accent-ink); margin-bottom: 10px; }
+    .chain-steps { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 0; counter-reset: ch; }
+    .chain-steps li { counter-increment: ch; font-weight: 600; font-size: .95rem; display: flex; align-items: center; }
+    .chain-steps li::before { content: counter(ch); display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--surface-mint); color: var(--teal-ink); font-size: .72rem; font-weight: 700; margin-right: 8px; }
+    .chain-steps li:not(:last-child)::after { content: ""; width: 34px; height: 2px; background: var(--line-strong); margin: 0 12px; }
+
+    .ing-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 22px; padding: 12px 0; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); margin-bottom: var(--s-2); font-size: .84rem; font-weight: 600; }
+    .ing-legend li { display: flex; align-items: center; gap: 8px; }
+    .ing-legend li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--brand-secondary); }
+    .ing-legend li:first-child::after { content: none; }
+
+    .story-list { counter-reset: story; }
+    .story {
+      display: grid; grid-template-columns: 200px minmax(0, 1fr) 210px;
+      gap: var(--s-5); padding: var(--s-5) var(--s-3); border-bottom: 1px solid var(--line-strong);
+      border-radius: var(--r-sm); transition: all var(--t-fast) var(--ease);
+    }
+    .story:hover {
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(23,61,44,.07);
+      transform: translateY(-3px);
+    }
+    .story-meta p { margin: 0 0 4px; font-size: .86rem; line-height: 1.45; }
+    .story-num { display: block; font-size: 2.8rem; font-weight: 800; line-height: .9; letter-spacing: -.04em; color: var(--numeral); margin-bottom: 12px; }
+    .story-theme { font-weight: 700; color: var(--teal-ink); }
+    .story-place { color: var(--text-secondary); }
+    .story-status { font-weight: 600; }
+    .story h3 { font-size: clamp(1.25rem, 1.8vw, 1.55rem); letter-spacing: -.02em; margin-bottom: var(--s-3); max-width: 34ch; }
+    .story-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); }
+    .story-cols p:not(.kicker) { font-size: .98rem; color: var(--text-secondary); margin: 0; }
+
+    .ingredients { list-style: none; display: grid; gap: 4px; margin-bottom: var(--s-3); }
+    .ingredients li { display: flex; align-items: center; gap: 10px; font-size: .88rem; color: var(--text-secondary); }
+    .ingredients li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--line-strong); flex: none; }
+    .ingredients li.on { color: var(--text-primary); font-weight: 700; }
+    .ingredients li.on::before { background: var(--brand-secondary); border-color: var(--brand-secondary); }
+
+    .callout { margin: 0; padding-top: 10px; border-top: 2px solid var(--brand-accent); font-weight: 600; font-size: .95rem; line-height: 1.4; }
+    .callout span { display: block; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .1em; color: var(--accent-ink); font-weight: 700; margin-bottom: 4px; }
+
+    .acc { margin-top: var(--s-3); }
+    .acc summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 700; font-size: .95rem; color: var(--teal-ink); border-radius: var(--r-xs); transition: all var(--t-fast); }
+    .acc summary::-webkit-details-marker { display: none; }
+    .acc summary:hover { color: var(--brand-secondary); transform: translateX(3px); }
+    .acc-icon { position: relative; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid currentColor; flex: none; }
+    .acc-icon::before, .acc-icon::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.5px; background: currentColor; transform: translate(-50%, -50%); transition: transform var(--t-med) var(--ease); }
+    .acc-icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+    .acc[open] .acc-icon::after { transform: translate(-50%, -50%) rotate(0deg); }
+    .acc-body { overflow: hidden; }
+    .acc-body > :first-child { padding-top: 8px; }
+    .theme--climate .acc summary { color: var(--brand-highlight); }
+
+    .photo-break { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); background: var(--brand-primary); color: var(--text-on-dark); }
+    .photo-break-media { overflow: hidden; }
+    .photo-break-media img { width: 100%; height: 100%; min-height: 480px; max-height: 680px; object-fit: cover; object-position: 50% 30%; }
+    .photo-break-text { display: flex; flex-direction: column; justify-content: center; padding: var(--s-6) clamp(24px, 7vw, 120px); position: relative; }
+    .photo-break-text::before { content: ""; position: absolute; left: 0; top: 50%; width: clamp(24px, 5vw, 80px); height: 2px; background: var(--brand-accent); }
+    .pb-statement { font-size: clamp(1.7rem, 3vw, 2.6rem); font-weight: 700; line-height: 1.2; letter-spacing: -.02em; max-width: 20ch; }
+    .pb-note { color: var(--text-on-dark-2); max-width: 52ch; margin: 0; }
+
+    .pathway { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--s-3); }
+    .stage {
+      position: relative; padding-top: 40px; padding-inline: 8px;
+      border-radius: var(--r-xs); transition: all var(--t-fast) var(--ease);
+    }
+    .stage:hover {
+      background: #ffffff;
+      box-shadow: 0 6px 20px rgba(23,61,44,.06);
+      transform: translateY(-4px);
+    }
+    .stage::before { content: ""; position: absolute; left: 18px; right: calc(-1 * var(--s-3)); top: 8px; height: 2px; background: var(--brand-primary); transform-origin: left center; }
+    .stage:last-child::before { display: none; }
+    .stage-dot { position: absolute; left: 0; top: 0; width: 18px; height: 18px; border-radius: 50%; background: var(--surface-light); border: 2px solid var(--brand-primary); }
+    .stage-dot--goal { background: var(--brand-accent); border-color: var(--brand-accent); }
+    .stage-no { display: block; font-size: .78rem; font-weight: 700; color: var(--accent-ink); letter-spacing: .08em; margin-bottom: 4px; }
+    .stage h3 { font-size: 1.15rem; margin-bottom: 6px; }
+    .stage p { font-size: .9rem; color: var(--text-primary); line-height: 1.5; margin-bottom: 10px; }
+    .stage ul { list-style: none; border-top: 1px solid var(--line); padding-top: 8px; }
+    .stage li { font-size: .84rem; color: var(--text-secondary); padding: 2px 0; line-height: 1.4; }
+
+    .idea { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--s-6); padding: var(--s-6) 0; border-top: 1px solid var(--line-strong); align-items: start; }
+    .idea:first-of-type { margin-top: var(--s-6); }
+    .idea-label { display: flex; align-items: center; gap: 12px; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--accent-ink); margin-bottom: 14px; }
+    .idea-label span { display: inline-grid; place-items: center; width: 28px; height: 28px; border: 1.5px solid var(--accent-ink); border-radius: var(--r-xs); font-size: .8rem; letter-spacing: 0; }
+    .idea h3 { font-size: clamp(1.45rem, 2.2vw, 1.9rem); letter-spacing: -.02em; line-height: 1.15; max-width: 22ch; }
+    .idea-text > p { color: var(--text-secondary); }
+    .criteria { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px var(--s-3); margin-top: var(--s-3); }
+    .criteria li { font-size: .9rem; color: var(--text-secondary); line-height: 1.45; border-top: 1px solid var(--line); padding-top: 8px; }
+    .criteria b { display: block; color: var(--text-primary); }
+
+    .spectrum { padding-top: 8px; }
+    .spectrum-ends { display: flex; justify-content: space-between; font-weight: 700; font-size: .92rem; margin-bottom: 14px; }
+    .spectrum-ends span:last-child { color: var(--accent-ink); }
+    .spectrum-ends span:first-child { color: var(--teal-ink); }
+    .spectrum-track { position: relative; height: 2px; background: linear-gradient(90deg, var(--brand-teal) 0 50%, var(--brand-accent) 50% 100%); margin: 0 0 12px; }
+    .spectrum-track::before, .spectrum-track::after { content: ""; position: absolute; top: -5px; width: 12px; height: 12px; border-radius: 50%; }
+    .spectrum-track::before { left: 0; background: var(--brand-teal); }
+    .spectrum-track::after { right: 0; background: var(--brand-accent); }
+    .spectrum-centre { position: absolute; left: 50%; top: 16px; transform: translateX(-50%); font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; background: var(--surface-light); padding: 2px 8px; white-space: nowrap; color: var(--text-primary); }
+    .spectrum-centre::after { content: ""; position: absolute; left: 50%; bottom: 100%; width: 2px; height: 14px; background: var(--brand-primary); }
+    .spectrum-points { list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 56px; }
+    .spectrum-points li { position: relative; font-size: .86rem; line-height: 1.4; padding-top: 16px; font-weight: 600; }
+    .spectrum-points li::before { content: ""; position: absolute; left: 0; top: 0; width: 2px; height: 10px; background: var(--line-strong); }
+
+    .ledger { position: relative; padding-left: 30px; }
+    .ledger::before { content: ""; position: absolute; left: 7px; top: 12px; bottom: 16px; width: 2px; background: var(--brand-secondary); }
+    .ledger-top { position: relative; font-weight: 800; font-size: 1.05rem; margin-bottom: 10px; }
+    .ledger-node { position: absolute; left: -30px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--brand-accent); }
+    .ledger-rows > div { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-2); padding: 11px 12px 11px 0; border-top: 1px solid var(--line); }
+    .ledger-rows > div::before { content: ""; position: absolute; left: -27px; top: 19px; width: 10px; height: 10px; border-radius: 50%; background: var(--surface-light); border: 2px solid var(--brand-secondary); }
+    .ledger-rows dt { font-weight: 700; font-size: .95rem; }
+    .ledger-rows dd { font-size: .92rem; color: var(--text-secondary); }
+    .ledger-rows .ledger-paf { background: var(--surface-mint); padding-left: 12px; border-top-color: transparent; }
+    .ledger-rows .ledger-paf::before { background: var(--brand-secondary); }
+    .ledger-bottom { margin: 12px 0 0; font-weight: 700; color: var(--accent-ink); }
+
+    .flow--compact li { padding-top: 32px; }
+    .csr-flow .flow li.paf .flow-node { background: var(--brand-teal); border-color: var(--brand-teal); }
+    .paf-bracket { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 14px; }
+    .paf-bracket span { grid-column: 2 / 5; position: relative; margin-right: 20px; padding-top: 22px; text-align: center; font-size: .82rem; font-weight: 700; color: var(--teal-ink); }
+    .paf-bracket span::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 14px; border: 2px solid var(--brand-teal); border-top: 0; }
+
+    .loop { display: flex; justify-content: center; }
+    .loop-svg { width: 100%; max-width: 360px; height: auto; }
+    .loop-arc { fill: none; stroke: var(--brand-secondary); stroke-width: 2; marker-end: url(#loop-arrow); }
+    .loop-arrowhead { fill: var(--brand-secondary); }
+    .loop-node { fill: var(--surface-light); stroke: var(--brand-primary); stroke-width: 2; }
+    .loop-node--accent { fill: var(--brand-accent); stroke: var(--brand-accent); }
+    .loop-label { font-family: var(--font); font-size: 15px; font-weight: 700; fill: var(--text-primary); text-anchor: middle; }
+    .loop-label--end { text-anchor: end; }
+    .loop-label--start { text-anchor: start; }
+
+    .inst-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: var(--s-6); align-items: start; }
+    .tiers { list-style: none; position: relative; }
+    .tiers::before { content: ""; position: absolute; left: 6px; top: 18px; bottom: 30px; width: 2px; background: var(--line-on-dark); }
+    .tier { position: relative; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: var(--s-3); padding: 18px 0 18px 32px; border-top: 1px solid var(--line-on-dark); }
+    .tier:first-child { border-top: 0; }
+    .tier::before { content: ""; position: absolute; left: 0; top: 24px; width: 14px; height: 14px; border-radius: 50%; background: var(--brand-primary); border: 2px solid var(--brand-highlight); }
+    .tier:last-child::before { background: var(--brand-highlight); }
+    .tier-level { font-weight: 800; font-size: 1.08rem; color: var(--brand-highlight); }
+    .tier p { color: var(--text-on-dark); margin: 0 0 8px; font-size: .98rem; }
+    .tier-proof { font-size: .9rem !important; color: var(--text-on-dark-2) !important; }
+    .tier-proof span { display: block; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--brand-accent); margin-bottom: 2px; }
+
+    .engage { border-top: 2px solid var(--brand-highlight); padding-top: 16px; position: sticky; top: 96px; }
+    .engage-note { margin: var(--s-3) 0 0; color: var(--text-on-dark-2); font-size: .95rem; }
+    .engage .kicker { color: var(--brand-highlight); }
+    .engage-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--s-3); counter-reset: eng; }
+    .engage-list li { counter-increment: eng; padding: 10px 0; border-bottom: 1px solid var(--line-on-dark); font-weight: 600; font-size: .95rem; display: flex; gap: 10px; }
+    .engage-list li::before { content: counter(eng, decimal-leading-zero); font-size: .74rem; color: var(--brand-highlight); font-weight: 700; padding-top: 3px; }
+
+    .where-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: var(--s-6); align-items: start; }
+    .where-geo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-3); margin-top: var(--s-3); }
+    .where-geo-card {
+      position: relative; min-height: 100%; background: var(--surface-white);
+      border: 1px solid var(--line); border-radius: var(--r-md);
+      padding: clamp(24px, 2.7vw, 34px);
+      transition: transform var(--t-med) var(--ease), border-color var(--t-med), box-shadow var(--t-med);
+    }
+    .where-geo-card:hover { transform: translateY(-6px); border-color: var(--brand-accent); box-shadow: 0 16px 36px rgba(11, 45, 39, .09); }
+    .where-geo-index { display: block; color: var(--accent-ink); font-size: .72rem; font-weight: 800; letter-spacing: .14em; margin-bottom: 20px; }
+    .where-geo-card h3 { font-size: 1.28rem; margin-bottom: 10px; }
+    .where-geo-card p { margin: 0; color: var(--text-secondary); font-size: var(--fs-small); line-height: 1.62; }
+
+    .where-federated-note {
+      margin-top: var(--s-3); background: var(--surface-mint);
+      border: 1px solid rgba(12, 93, 79, .12); border-radius: var(--r-md);
+      padding: clamp(28px, 4vw, 46px); display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--s-5); align-items: center;
+    }
+    .where-federated-note h3 { margin: 0; font-size: clamp(1.45rem, 2.4vw, 2rem); line-height: 1.2; max-width: 22ch; }
+    .where-federated-note p { margin: 0; color: var(--text-secondary); max-width: 65ch; }
+
+    .board-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--s-6); }
+    .person {
+      display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: var(--s-3);
+      padding: var(--s-4) var(--s-2); border-top: 2px solid var(--brand-primary);
+      border-radius: var(--r-xs); transition: all var(--t-fast) var(--ease);
+    }
+    .person:hover {
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(23,61,44,.06);
+      transform: translateY(-4px);
+    }
+    .board-photo { position: relative; width: 84px; height: 84px; overflow: hidden; border: 1px solid var(--line-strong); background: var(--surface-warm); border-radius: var(--r-xs); }
+    .board-photo::after { content: ""; position: absolute; left: 0; bottom: 0; width: 22px; height: 3px; background: var(--brand-accent); z-index: 2; }
+    .board-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 22%; }
+    .person h3 { font-size: 1.4rem; letter-spacing: -.02em; margin-bottom: 4px; }
+    .expertise { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--teal-ink); margin-bottom: 12px; }
+    .expertise i { font-style: normal; color: var(--accent-ink); padding: 0 4px; }
+    .person-body > p:not(.expertise) { color: var(--text-secondary); font-size: .98rem; }
+
+    .pathways { border-top: 2px solid var(--brand-primary); }
+    .pw {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+      gap: var(--s-2) var(--s-5); padding: var(--s-4) var(--s-2); border-bottom: 1px solid var(--line-strong);
+      border-radius: var(--r-xs); transition: all var(--t-fast) var(--ease);
+    }
+    .pw:hover {
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(23,61,44,.05);
+      transform: translateY(-3px);
+    }
+    .pw h3 { font-size: 1.3rem; letter-spacing: -.02em; margin: 0; }
+    .pw-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); }
+    .pw-cols > div { position: relative; }
+    .pw-cols > div:not(:last-child)::after { content: "+"; position: absolute; right: calc(-1 * var(--s-5) / 2 - 6px); top: 24px; font-weight: 700; color: var(--accent-ink); font-size: 1.1rem; }
+    .pw-cols > div:nth-child(2)::after { content: "→"; }
+    .pw-cols dt { font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--text-secondary); margin-bottom: 4px; }
+    .pw-cols dd { font-size: 1rem; line-height: 1.45; }
+    .pw-out dt { color: var(--accent-ink); }
+    .pw-out dd { font-weight: 700; }
+    .pw-typical { grid-column: 2; margin: 0; font-size: .88rem; color: var(--text-secondary); }
+    .pw-typical i { font-style: normal; color: var(--accent-ink); padding: 0 3px; }
+
+    .cta {
+      position: relative; overflow: hidden; margin-top: var(--s-6);
+      background: var(--surface-mint); color: var(--brand-primary);
+      border-radius: var(--r-sm); padding: var(--s-5); display: grid;
+      grid-template-columns: minmax(0, 1.5fr) auto; gap: var(--s-4); align-items: end;
+      border: 1px solid #D3E9D9;
+    }
+    .cta-motif { position: absolute; right: 0; top: 0; width: 420px; height: auto; pointer-events: none; }
+    .cta-line { fill: none; stroke: var(--brand-primary); stroke-opacity: .28; stroke-width: 1.5; }
+    .cta-dot { fill: var(--brand-primary); fill-opacity: .35; }
+    .cta h2 { font-size: clamp(1.9rem, 3.4vw, 2.9rem); margin-bottom: 10px; color: var(--brand-primary); }
+    .cta p:last-child { margin: 0; max-width: 52ch; font-size: 1.05rem; }
+
+    .site-footer { background: #102C20; color: #fff; padding: var(--s-6) 0 var(--s-4); font-size: .92rem; }
+    .footer-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(0, 1fr)); gap: var(--s-5); padding-bottom: var(--s-5); border-bottom: 1px solid var(--line-on-dark); }
+    .footer-name { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .footer-desc { max-width: 44ch; }
+    .footer-tag { color: var(--brand-highlight); font-weight: 600; margin: 0; }
+    .footer-head { font-size: var(--fs-label); text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--brand-highlight); margin-bottom: 10px; }
+    .footer-col { display: flex; flex-direction: column; align-items: flex-start; }
+    .footer-col a { text-decoration: none; padding: 5px 0; color: var(--text-on-dark-2); transition: color var(--t-fast); }
+    .footer-col a:hover { color: var(--brand-highlight); text-decoration: underline; }
+    .footer-base { display: flex; justify-content: space-between; gap: var(--s-3); padding-top: var(--s-3); font-size: .82rem; }
+    .footer-base p { margin: 0; }
+    .footer-legal { display: flex; gap: var(--s-3); }
+
+    .partners-section { background: var(--surface-warm); }
+    .partners-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .partner-card {
+      display: flex; flex-direction: column; min-width: 0; background: #fff;
+      border: 1px solid var(--line); border-radius: 9px; text-decoration: none; overflow: hidden;
+      transition: all .28s var(--ease);
+    }
+    .partner-card:hover, .partner-card:focus-visible {
+      transform: translateY(-6px);
+      border-color: var(--brand-accent);
+      box-shadow: 0 16px 36px rgba(23,61,44,.11);
+    }
+    .partner-logo-stage { height: 150px; display: flex; align-items: center; justify-content: center; padding: 24px 28px; background: #fff; border-bottom: 1px solid var(--line); }
+    .partner-logo-stage img { display: block; max-width: 82%; max-height: 84px; width: auto; height: auto; object-fit: contain; object-position: center; transition: transform var(--t-fast); }
+    .partner-card:hover .partner-logo-stage img { transform: scale(1.05); }
+    .partner-card-copy { padding: 17px 20px 19px; display: flex; flex-direction: column; gap: 3px; min-height: 84px; }
+    .partner-card-copy strong { font-family: "Source Sans 3", sans-serif; font-size: 1rem; line-height: 1.25; color: var(--text-primary); }
+    .partner-card-copy span { font-size: .82rem; line-height: 1.45; color: var(--text-secondary); }
+
+    .compliance-band {
+      margin: -10px 0 var(--s-6); padding: clamp(26px, 3.4vw, 40px); background: #fff;
+      border: 1px solid var(--line); border-top: 4px solid var(--brand-accent); border-radius: 10px;
+      display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.55fr); gap: clamp(26px, 4vw, 52px);
+      align-items: start; box-shadow: 0 14px 34px rgba(23,61,44,.04);
+    }
+    .compliance-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 26px; }
+    .compliance-item { position: relative; padding: 14px 0 16px 36px; border-top: 1px solid var(--line); }
+    .compliance-item:nth-child(-n+2) { border-top: 0; padding-top: 0; }
+    .compliance-item > span { position: absolute; left: 0; top: 15px; font-size: .7rem; font-weight: 800; letter-spacing: .08em; color: var(--accent-ink); }
+    .compliance-item:nth-child(-n+2) > span { top: 1px; }
+
+    .impact-section { background: #fff; }
+    .impact-architecture {
+      position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px; margin: 0 0 var(--s-6); padding: 26px; background: var(--surface-warm);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .impact-outcome { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 24px 24px 22px; min-height: 174px; transition: all var(--t-fast); }
+    .impact-outcome:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(23,61,44,.08); border-color: var(--brand-accent); }
+    .impact-outcome > span { display: inline-block; font-size: .78rem; font-weight: 800; letter-spacing: .12em; color: var(--accent-ink); margin-bottom: 12px; }
+    .impact-centre {
+      position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      width: 178px; height: 178px; border-radius: 50%; background: var(--brand-primary);
+      color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 20px; box-shadow: 0 0 0 10px var(--surface-warm), 0 10px 30px rgba(23,61,44,.12);
+    }
+    .impact-snapshot { background: var(--brand-primary); color: #fff; border-radius: 10px; padding: clamp(28px, 4vw, 48px); margin-bottom: var(--s-6); }
+    .impact-snapshot-head { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: var(--s-4); align-items: start; margin-bottom: 28px; }
+    .impact-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line-on-dark); }
+    .impact-metric { padding: 24px 24px 4px 0; border-right: 1px solid var(--line-on-dark); min-height: 170px; }
+    .impact-metric:not(:first-child) { padding-left: 24px; }
+    .impact-metric:last-child { border-right: 0; }
+    .impact-metric strong { display: block; font-size: clamp(2.7rem, 5vw, 4.6rem); font-weight: 800; line-height: .92; letter-spacing: -.045em; color: var(--brand-highlight); margin-bottom: 14px; }
+
+    .harvest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .harvest-card { background: var(--surface-tint); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: flex; flex-direction: column; min-height: 235px; transition: all var(--t-fast); }
+    .harvest-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(23,61,44,.08); border-color: var(--brand-accent); }
+    .harvest-tag { font-size: .73rem !important; text-transform: uppercase; letter-spacing: .09em; font-weight: 800; color: var(--accent-ink) !important; margin-bottom: 14px !important; }
+
+    .impact-path-steps { list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
+    .impact-path-steps li { position: relative; padding: 36px 14px 0 0; }
+    .impact-path-steps li::before { content: ""; position: absolute; left: 14px; right: 0; top: 11px; height: 2px; background: var(--line-strong); }
+    .impact-path-steps li::after { content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid var(--brand-primary); }
+    .impact-path-steps li:last-child::before { display: none; }
+    .impact-path-steps li:last-child::after { background: var(--brand-accent); border-color: var(--brand-accent); }
+
+    .profile-link {
+      display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 9px 13px;
+      border: 1px solid var(--brand-secondary); border-radius: 5px; color: var(--brand-primary) !important;
+      text-decoration: none; font-weight: 700; font-size: .92rem; transition: all .2s ease;
+    }
+    .profile-link:hover { background: var(--brand-primary); border-color: var(--brand-primary); color: #fff !important; transform: translateY(-2px); box-shadow: 0 4px 14px rgba(23,61,44,.18); }
+
+    @media(max-width:1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 0; }
+      .hero-media img { min-height: 0; aspect-ratio: 4 / 3; max-height: 560px; }
+      .theme-body, .theme-body--flip { grid-template-columns: 1fr; gap: var(--s-4); }
+      .practice-cols { grid-template-columns: 1fr; gap: var(--s-4); }
+      .inst-grid, .where-grid { grid-template-columns: 1fr; gap: var(--s-5); }
+      .photo-break { grid-template-columns: 1fr 1fr; }
+      .board-grid { grid-template-columns: 1fr; }
+      .partners-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .impact-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pathway { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--s-5); }
+    }
+
+    @media(max-width:760px) {
+      .flow { grid-template-columns: 1fr; }
+      .flow li { padding: 0 0 18px 36px; min-height: 48px; }
+      .flow li::before { left: 9px; right: auto; top: 22px; bottom: 0; width: 2px; height: auto; }
+      .flow li::after { display: none; }
+      .pathway { grid-template-columns: 1fr; }
+      .stage { padding: 0 0 24px 38px; }
+      .stage::before { left: 8px; right: auto; top: 20px; bottom: 0; width: 2px; height: auto; }
+      .story { grid-template-columns: 1fr; }
+      .story-cols, .harvest-grid, .partners-grid, .where-geo-grid, .impact-metrics { grid-template-columns: 1fr; }
+      .impact-architecture { grid-template-columns: 1fr; }
+      .impact-centre { position: static; transform: none; width: auto; height: auto; border-radius: 8px; box-shadow: none; margin-bottom: 16px; }
+      .cta { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="js pa-root" style="width: 100%; min-height: 900px; background: #ffffff;">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand brand--logo" href="#home" aria-label="Practical Action Foundation, home">
+        <img class="brand-logo" src="assets/paf-logo.png" alt="Practical Action Foundation" />
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="menu-toggle-bars" aria-hidden="true"></span>
+        <span class="menu-toggle-label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#our-work">Our Work</a></li>
+          <li><a class="nav-link" href="#impact">Impact</a></li>
+          <li><a class="nav-link" href="#partners">Partners</a></li>
+          <li><a class="nav-link" href="#how-we-work">How We Work</a></li>
+          <li><a class="nav-link" href="#where-we-work">Where We Work</a></li>
+          <li><a class="nav-link" href="#board">Board</a></li>
+          <li><a class="nav-link nav-link--cta" href="#partner">Partner With Us</a></li>
+        </ul>
+        <span class="nav-indicator" aria-hidden="true"></span>
+      </nav>
+    </div>
+    <div class="nav-scrim"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Practical Action Foundation · India</p>
+          <h1 id="hero-title" class="reveal">Practical solutions. <span class="h1-accent">Lasting impact.</span></h1>
+          <p class="hero-lead reveal">We work with communities, public institutions, enterprises and funders to turn complex development challenges into practical outcomes that endure, bringing technology, finance and evidence to the places they matter most.</p>
+          <div class="actions reveal">
+            <a class="btn btn--dark" href="#our-work">Explore our work <span class="btn-arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--line" href="#partner">Partner with us</a>
+          </div>
+          <p class="logic-line reveal">
+            <span class="logic-label">How we work, in one line</span>
+            <span class="logic-terms">People <i>+</i> institutions <i>+</i> technology <i>+</i> enterprise <i>+</i> finance <i>+</i> evidence</span>
+          </p>
+        </div>
+        <figure class="hero-media media-reveal">
+          <img src="assets/hero-women-electric-mobility.jpg" alt="Women participating in an inclusive mobility initiative stand together beside electric auto-rickshaws." width="1672" height="941" style="object-position:50% 45%;" />
+          <figcaption class="tech-caption">
+            <span class="tc-mark" aria-hidden="true"></span> Women building confidence, livelihoods and new possibilities through inclusive green mobility.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Why We Exist Section -->
+    <section id="approach" class="section section--sand proposition" aria-labelledby="prop-title">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-num" data-num="01" aria-hidden="true"></span>
+          <div class="sec-head-body">
+            <p class="eyebrow">Why we exist</p>
+            <h2 id="prop-title">Hard problems rarely sit inside one sector.</h2>
+            <p class="lead">Extreme heat is a health, water, housing and livelihood problem at once. Food loss is about roads, storage, markets and credit as much as farming. Lasting outcomes come from combining the pieces, and from someone taking responsibility for making them work together on the ground.</p>
+          </div>
+        </div>
+
+        <div class="system" data-system="">
+          <div class="system-diagram reveal">
+            <svg class="system-svg" viewBox="0 0 540 440" role="img" aria-labelledby="sys-t">
+              <title id="sys-t">Six elements converge into a practical solution leading to lasting impact.</title>
+              <path class="sys-path draw" d="M150 40 C 270 40, 290 220, 390 220" data-node="1" pathLength="1"></path>
+              <path class="sys-path draw" d="M150 112 C 270 112, 290 220, 390 220" data-node="2" pathLength="1"></path>
+              <path class="sys-path draw" d="M150 184 C 270 184, 290 220, 390 220" data-node="3" pathLength="1"></path>
+              <path class="sys-path draw" d="M150 256 C 270 256, 290 220, 390 220" data-node="4" pathLength="1"></path>
+              <path class="sys-path draw" d="M150 328 C 270 328, 290 220, 390 220" data-node="5" pathLength="1"></path>
+              <path class="sys-path draw" d="M150 400 C 270 400, 290 220, 390 220" data-node="6" pathLength="1"></path>
+              <path class="sys-out draw" d="M390 220 L 490 220" pathLength="1"></path>
+              <g class="sys-node" data-node="1"><circle cx="150" cy="40" r="7"></circle><text x="132" y="46">People</text></g>
+              <g class="sys-node" data-node="2"><circle cx="150" cy="112" r="7"></circle><text x="132" y="118">Institutions</text></g>
+              <g class="sys-node" data-node="3"><circle cx="150" cy="184" r="7"></circle><text x="132" y="190">Technology</text></g>
+              <g class="sys-node" data-node="4"><circle cx="150" cy="256" r="7"></circle><text x="132" y="262">Enterprise</text></g>
+              <g class="sys-node" data-node="5"><circle cx="150" cy="328" r="7"></circle><text x="132" y="334">Finance</text></g>
+              <g class="sys-node" data-node="6"><circle cx="150" cy="400" r="7"></circle><text x="132" y="406">Evidence</text></g>
+              <circle class="sys-hub" cx="390" cy="220" r="10"></circle>
+              <text class="sys-hub-label" x="390" y="196">Practical solution</text>
+              <circle class="sys-goal" cx="490" cy="220" r="13"></circle>
+              <text class="sys-goal-label" x="530" y="262">Lasting impact</text>
+            </svg>
+          </div>
+
+          <ol class="system-list">
+            <li class="reveal" data-node="1"><b>People</b><span>Communities and frontline workers define the problem and test the answer.</span></li>
+            <li class="reveal" data-node="2"><b>Institutions</b><span>Municipalities, district bodies, collectives and local organisations carry delivery and keep it going.</span></li>
+            <li class="reveal" data-node="3"><b>Technology</b><span>From simple, appropriate tools to digital and frontier tools, chosen for use, not novelty.</span></li>
+            <li class="reveal" data-node="4"><b>Enterprise</b><span>Livelihoods, producer businesses and markets that keep working after a project closes.</span></li>
+            <li class="reveal" data-node="5"><b>Finance</b><span>Philanthropic, CSR, public and private capital, sequenced to prove, de-risk and then grow.</span></li>
+            <li class="reveal" data-node="6"><b>Evidence</b><span>Baselines, measurement and learning that improve delivery while it is running.</span></li>
+          </ol>
+        </div>
+
+        <ol class="principles">
+          <li class="reveal"><span class="pr-num">i</span><h3>Start with the ground reality</h3><p>Listen to people, institutions and markets before designing anything.</p></li>
+          <li class="reveal"><span class="pr-num">ii</span><h3>Prove it practically</h3><p>Test in real settings and build evidence on adoption, inclusion and economics.</p></li>
+          <li class="reveal"><span class="pr-num">iii</span><h3>Build for continuity</h3><p>Connect finance, enterprise, skills, data and local ownership from the start.</p></li>
+          <li class="reveal"><span class="pr-num">iv</span><h3>Hand over well</h3><p>Help partners and local institutions carry proven approaches forward on their own.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Our Work Section (With Moved Auto-Sliding Themes Bar) -->
+    <section id="our-work" class="section work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-num" data-num="02" aria-hidden="true"></span>
+          <div class="sec-head-body">
+            <p class="eyebrow">Our work</p>
+            <h2 id="work-title">Practical Action creates impact across four inter-connected flagship programme areas</h2>
+            <p class="lead">Each area starts from a real system problem rather than a sector label. Practical Action Foundation builds on Practical Action’s long-standing programme, technical and partnership experience in India, and we show current work and earlier experience separately.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auto-Sliding Theme Strip -->
+      <div class="theme-slider-container" aria-label="Our four areas of work carousel">
+        <div class="theme-slider-track">
+          <!-- Primary Track -->
+          <div class="theme-slider-group">
+            <a href="#food-systems"><span class="ts-num">01</span>Food Systems</a>
+            <a href="#climate-resilience"><span class="ts-num">02</span>Climate Resilience</a>
+            <a href="#energy-wash"><span class="ts-num">03</span>Energy and WASH</a>
+            <a href="#green-economy"><span class="ts-num">04</span>Green and Inclusive Economy</a>
+          </div>
+          <!-- Continuous Loop Duplicate -->
+          <div class="theme-slider-group" aria-hidden="true">
+            <a href="#food-systems"><span class="ts-num">01</span>Food Systems</a>
+            <a href="#climate-resilience"><span class="ts-num">02</span>Climate Resilience</a>
+            <a href="#energy-wash"><span class="ts-num">03</span>Energy and WASH</a>
+            <a href="#green-economy"><span class="ts-num">04</span>Green and Inclusive Economy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Theme 01: Food Systems -->
+      <article id="food-systems" class="theme theme--food" aria-labelledby="t-food">
+        <div class="wrap">
+          <header class="theme-head reveal">
+            <span class="theme-num" data-num="01" aria-hidden="true"></span>
+            <div class="theme-name"><p class="eyebrow">Theme 01</p><h3 id="t-food" class="theme-title">Food Systems</h3></div>
+            <div class="theme-why">
+              <p class="kicker">Why this matters</p>
+              <p>Farmers carry the risk of every weather shock and every price swing. Produce loses value between the field and the buyer, through handling, storage and weak market links, and those losses are rarely measured. Producer institutions often lack the capital and systems to act together. We work across the whole chain, so more of what is grown is sold, and more of the value stays with the people who grow it.</p>
+            </div>
+          </header>
+
+          <figure class="flow-figure reveal">
+            <ol class="flow flow--5">
+              <li><span class="flow-node" aria-hidden="true"></span><b>Farm</b><span>Resilient, regenerative production</span></li>
+              <li><span class="flow-node" aria-hidden="true"></span><b>Aggregation</b><span>Collection, grading, collective sale</span></li>
+              <li><span class="flow-node" aria-hidden="true"></span><b>Post-harvest</b><span>Handling, storage, logistics, quality</span></li>
+              <li><span class="flow-node" aria-hidden="true"></span><b>Market</b><span>Buyers, value chains, enterprise</span></li>
+              <li><span class="flow-node flow-node--goal" aria-hidden="true"></span><b>Income</b><span>More value kept by producers</span></li>
+            </ol>
+            <figcaption class="flow-support"><span>Linked throughout by</span> producer institutions <i>·</i> finance <i>·</i> evidence and MRV</figcaption>
+          </figure>
+
+          <div class="theme-body">
+            <details class="work-accordion work-accordion--scope reveal" open>
+              <summary><span class="work-accordion-label">What we work on</span></summary>
+              <div class="work-accordion-body">
+                <div class="scope-grid">
+                  <div><h4>Production</h4><ul><li>Climate-resilient agriculture</li><li>Regenerative practices</li><li>Horticulture</li><li>Improved production systems</li></ul></div>
+                  <div><h4>Post-harvest</h4><ul><li>Handling and aggregation</li><li>Storage and logistics</li><li>Loss reduction</li><li>Quality management</li></ul></div>
+                  <div><h4>Producer institutions</h4><ul><li>FPOs and farmer collectives</li><li>Women producer groups</li><li>Governance and capacity</li></ul></div>
+                  <div><h4>Markets and enterprise</h4><ul><li>Value chains</li><li>Market access and buyer links</li><li>Producer enterprise and business models</li></ul></div>
+                  <div><h4>Evidence</h4><ul><li>Baselines and diagnostics</li><li>Value chain and loss analysis</li><li>MRV where relevant</li></ul></div>
+                </div>
+              </div>
+            </details>
+            <figure class="theme-photo media-reveal">
+              <img src="assets/programme/food-agriculture-tomato-farmer.webp" alt="An older woman in a purple handwoven sari stands in a field holding a blue basin of freshly picked tomatoes against her hip." width="1280" height="1707" loading="lazy" />
+              <figcaption class="tech-caption"><span class="tc-mark" aria-hidden="true"></span> Tomato harvest. The first link in a chain where value is easily lost.</figcaption>
+            </figure>
+          </div>
+
+          <!-- Permanently Visible Work in Practice -->
+          <div class="practice-block reveal">
+            <div class="practice-block-header">Work in practice</div>
+            <div class="practice-cols practice-cols--single">
+              <div class="practice-col">
+                <h4 class="practice-label practice-label--current">Current and recent work</h4>
+                <ul class="practice-list practice-list--two">
+                  <li><b>Research on post-harvest losses</b><span class="pl-meta">Bargarh, Kandhamal, Dhenkanal and Rayagada, Odisha · 2025–26</span><p>Identifying and quantifying losses in tomato, strawberry and mango chains, using assessment methods supported by Wageningen University, to design commercially viable, farmer-centred solutions.</p></li>
+                  <li><b>MRV framework for regenerative agriculture</b><span class="pl-meta">Madhya Pradesh · completed 2025</span><p>Standardised methods to monitor, report and verify the impact of regenerative practices, developed with IDH for the Regenerative Production Landscape Collaborative.</p></li>
+                  <li><b>Value chain studies for women producers</b><span class="pl-meta">Odisha · completed 2025</span><p>Agri and horticulture value chain analysis to find gaps and micro-enterprise opportunities that help women move from producers to entrepreneurs.</p></li>
+                  <li><b>Farmer collective assessment</b><span class="pl-meta">Nagaland · completed 2024</span><p>A review of an apex FPO’s finances, operations, governance and market position, with recommendations on growth, technology and capacity.</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Theme 02: Climate Resilience -->
+      <article id="climate-resilience" class="theme theme--climate" aria-labelledby="t-climate">
+        <div class="wrap">
+          <header class="theme-head reveal">
+            <span class="theme-num" data-num="02" aria-hidden="true"></span>
+            <div class="theme-name"><p class="eyebrow">Theme 02</p><h3 id="t-climate" class="theme-title">Climate Resilience</h3></div>
+            <div class="theme-why">
+              <p class="kicker">Why this matters</p>
+              <p>Heat, floods, drought and storms reach households first, and they hit hardest where housing, water and incomes are already fragile. Risk is rarely one hazard. It is the combination of exposure, vulnerability and weak local systems. We help communities and local institutions understand that risk, act on it early, and restore the ecosystems that protect them.</p>
+            </div>
+          </header>
+
+          <figure class="flow-figure reveal">
+            <ol class="flow flow--5">
+              <li><span class="flow-node flow-node--hazard" aria-hidden="true"></span><b>Climate hazard</b><span>Heat, flood, drought, storm</span></li>
+              <li><span class="flow-node" aria-hidden="true"></span><b>Exposure</b><span>Who and what is in harm’s way</span></li>
+              <li><span class="flow-node" aria-hidden="true"></span><b>Vulnerability</b><span>Why some are hit harder</span></li>
+              <li><span class="flow-node flow-node--act" aria-hidden="true"></span><b>Practical intervention</b><span>Nature-based, technical, institutional</span></li>
+              <li><span class="flow-node flow-node--goal" aria-hidden="true"></span><b>Resilience outcome</b><span>Safer lives, steadier incomes</span></li>
+            </ol>
+            <figcaption class="flow-support"><span>We work at every step:</span> risk diagnostics <i>·</i> early warning <i>·</i> adaptation <i>·</i> restoration</figcaption>
+          </figure>
+
+          <div class="theme-body theme-body--flip">
+            <details class="work-accordion work-accordion--scope reveal" open>
+              <summary><span class="work-accordion-label">What we work on</span></summary>
+              <div class="work-accordion-body">
+                <div class="scope-grid">
+                  <div><h4>Understand risk</h4><ul><li>Climate-risk diagnostics</li><li>Hazard, exposure and vulnerability assessment</li><li>Early warning systems</li></ul></div>
+                  <div><h4>Reduce and prepare</h4><ul><li>Disaster risk reduction</li><li>Risk-informed planning</li><li>Preparedness from community to state</li></ul></div>
+                  <div><h4>Nature-based solutions</h4><ul><li>Mangrove and coastal restoration</li><li>Ecosystem restoration</li><li>Green and blue infrastructure</li></ul></div>
+                  <div><h4>Urban and water resilience</h4><ul><li>Extreme heat</li><li>Water stress and drought</li><li>Flood risk</li><li>Decentralised water systems</li></ul></div>
+                  <div><h4>Resilient livelihoods</h4><ul><li>Locally appropriate adaptation</li><li>Climate-resilient livelihoods</li><li>Women-led collectives</li></ul></div>
+                </div>
+              </div>
+            </details>
+            <figure class="theme-photo media-reveal">
+              <img src="assets/programme/climate-community-session.webp" alt="Women and project facilitators sit together during a community session, holding a hand-drawn poster." width="1600" height="1195" loading="lazy" />
+              <figcaption class="tech-caption"><span class="tc-mark" aria-hidden="true"></span> SHIELD community engagement: resilience is built with people, not for them.</figcaption>
+            </figure>
+          </div>
+
+          <!-- Permanently Visible Work in Practice -->
+          <div class="practice-block reveal">
+            <div class="practice-block-header">Work in practice</div>
+            <div class="practice-cols">
+              <div class="practice-col">
+                <h4 class="practice-label practice-label--current">Current and recent work</h4>
+                <ul class="practice-list">
+                  <li><b>SHIELD: nature-based urban resilience</b><span class="pl-meta">Akola, Jalgaon and Nanded-Waghala, Maharashtra · ongoing</span><p>Resilience to extreme heat and water stress through nature-based solutions, decentralised water systems and community-managed assets, with municipal bodies and women-led SHGs.</p></li>
+                  <li><b>Women-led mangrove systems</b><span class="pl-meta">Bhadrak, coastal Odisha · ongoing</span><p>Mangrove restoration through women-led collectives, working alongside the district administration and Forest Department, linking coastal protection with income.</p></li>
+                  <li><b>Climate resilience scoping study</b><span class="pl-meta">Maharashtra, Odisha and the Indian Himalayan region · 2025–26</span><p>Assessing climate risk, institutional readiness and community resilience pathways to inform future resilience investment.</p></li>
+                  <li><b>Early warning research</b><span class="pl-meta">India · 2025–26</span><p>Research on technology-enabled good practice in early warning systems, supported through the Duryog Nivaran network.</p></li>
+                </ul>
+              </div>
+              <div class="practice-col">
+                <h4 class="practice-label">Earlier experience in India</h4>
+                <ul class="practice-list">
+                  <li><b>Disaster preparedness and response</b><span class="pl-meta">Odisha · 2021–22</span><p>Evidence-based capacity building so that disaster risk reduction is planned, funded and implemented within development programmes, from Panchayat to State.</p></li>
+                  <li><b>Child-centred disaster planning</b><span class="pl-meta">Odisha · 2018–19</span><p>Institutionalising risk-informed, child-centred Gram Panchayat development planning through the state P&amp;RD Department.</p></li>
+                  <li><b>Resilience feasibility study</b><span class="pl-meta">Odisha · 2022–23</span><p>Testing the prerequisites, opportunities and risks for a resilience programme with indigenous communities.</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Theme 03: Energy and WASH -->
+      <article id="energy-wash" class="theme theme--energy" aria-labelledby="t-energy">
+        <div class="wrap">
+          <header class="theme-head reveal">
+            <span class="theme-num" data-num="03" aria-hidden="true"></span>
+            <div class="theme-name"><p class="eyebrow">Theme 03</p><h3 id="t-energy" class="theme-title">Energy and WASH</h3></div>
+            <div class="theme-why">
+              <p class="kicker">Why this matters</p>
+              <p>Clean water, safe sanitation and reliable energy are the services every other outcome depends on: health, learning, livelihoods and dignity. The technology often exists. What fails is the service around it: who runs it, who pays for it, and who fixes it when it breaks. We work on the technology and the service chain together, with the local bodies and communities who operate them.</p>
+            </div>
+          </header>
+
+          <figure class="services reveal">
+            <div class="services-row">
+              <div class="svc"><span class="svc-tag">Energy</span><p>Solar, micro-hydel and decentralised systems for lighting, pumping, cooling and productive use</p></div>
+              <span class="svc-link" aria-hidden="true"></span>
+              <div class="svc"><span class="svc-tag">Water</span><p>Safe drinking water from source to tap, including solar-powered and decentralised units</p></div>
+              <span class="svc-link" aria-hidden="true"></span>
+              <div class="svc"><span class="svc-tag">Sanitation</span><p>Toilets, faecal sludge management and city-wide sanitation services</p></div>
+              <span class="svc-link svc-link--goal" aria-hidden="true"></span>
+              <div class="svc svc--goal"><span class="svc-tag">Outcomes</span><p>Health <i>·</i> livelihoods <i>·</i> schools <i>·</i> community services</p></div>
+            </div>
+            <div class="chain">
+              <p class="chain-title">The sanitation service chain we design for</p>
+              <ol class="chain-steps">
+                <li>Containment</li><li>Emptying</li><li>Transport</li><li>Treatment</li><li>Safe reuse or disposal</li>
+              </ol>
+            </div>
+            <figcaption class="sr-only">Energy enables water, water enables sanitation, and together they produce health, livelihood and community outcomes. Sanitation is designed as a full service chain.</figcaption>
+          </figure>
+
+          <details class="work-accordion work-accordion--scope reveal" open>
+            <summary><span class="work-accordion-label">What we work on</span></summary>
+            <div class="work-accordion-body">
+              <div class="scope-grid scope-grid--4">
+                <div><h4>Energy access</h4><ul><li>Decentralised renewable energy</li><li>Solar applications and micro-hydel</li><li>Energy for livelihoods and productive use</li><li>Cooling</li></ul></div>
+                <div><h4>Water</h4><ul><li>Safe drinking water</li><li>Solar-powered and decentralised water</li><li>Community water systems</li></ul></div>
+                <div><h4>Sanitation</h4><ul><li>City-wide sanitation</li><li>Faecal sludge management</li><li>Decentralised sanitation</li><li>Solid waste systems</li></ul></div>
+                <div><h4>Operation and upkeep</h4><ul><li>School WASH</li><li>Community infrastructure</li><li>Local operation and maintenance</li><li>Technician skills</li></ul></div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Permanently Visible Work in Practice -->
+          <div class="practice-block reveal">
+            <div class="practice-block-header">Work in practice</div>
+            <div class="practice-cols practice-cols--single">
+              <div class="practice-col">
+                <h4 class="practice-label">Earlier experience in India</h4>
+                <ul class="practice-list practice-list--two">
+                  <li><b>Project Nirmal</b><span class="pl-meta">Dhenkanal and Angul, Odisha · 2014–19</span><p>City-wide sanitation service delivery demonstrated in two municipalities, with solid waste facilities, designed to inform state and national frameworks for replication.</p></li>
+                  <li><b>Swachh Samudai</b><span class="pl-meta">Khurda, Odisha · 2015–20</span><p>Sustainable water and sanitation service models for urban slum communities, built for adoption by public and private providers across Odisha.</p></li>
+                  <li><b>Solar drinking water units</b><span class="pl-meta">Four locations, Odisha · 2021–22</span><p>Decentralised, solar-based drinking water units, with performance tracking and capacity building for local stakeholders.</p></li>
+                  <li><b>Renewable energy for rural services</b><span class="pl-meta">Karnataka · 2018</span><p>Street lighting, safe drinking water and rural transport solutions based on renewable energy, with awareness work among local stakeholders.</p></li>
+                </ul>
+                <details class="acc acc--inline" style="margin-top: 14px;">
+                  <summary><span class="acc-icon" aria-hidden="true"></span>More experience</summary>
+                  <div class="acc-body">
+                    <ul class="practice-list practice-list--two">
+                      <li><b>School WASH</b><span class="pl-meta">Odisha · 2020</span><p>Water supply for school toilets and toilet renovation.</p></li>
+                      <li><b>Micro-hydel technician training</b><span class="pl-meta">Odisha · 2018</span><p>Training for technicians working on micro-hydel systems.</p></li>
+                      <li><b>COVID-19 WASH response</b><span class="pl-meta">Odisha · 2020</span><p>WASH kits, protective equipment and behaviour change messaging for vulnerable households.</p></li>
+                      <li><b>Cleaner transport hubs</b><span class="pl-meta">Jaipur and Jodhpur, Rajasthan · to 2016</span><p>Waste collection and disposal systems, and cleanliness practice, in two Transport Nagars.</p></li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Theme 04: Green Economy -->
+      <article id="green-economy" class="theme theme--economy" aria-labelledby="t-economy">
+        <div class="wrap">
+          <header class="theme-head reveal">
+            <span class="theme-num" data-num="04" aria-hidden="true"></span>
+            <div class="theme-name"><p class="eyebrow">Theme 04</p><h3 id="t-economy" class="theme-title">Green and Inclusive Economy</h3></div>
+            <div class="theme-why">
+              <p class="kicker">Why this matters</p>
+              <p>India’s green transition is creating new work in clean mobility, renewable energy, sustainable agriculture and circular services. Whether that transition is inclusive depends on who can reach the work. Women, young people and small producers face the same barriers again and again: skills, finance and assets, market links and social norms. We work on those barriers together, so a new livelihood becomes a lasting one.</p>
+            </div>
+          </header>
+
+          <figure class="flow-figure reveal">
+            <ol class="flow flow--5">
+              <li><span class="flow-node" aria-hidden="true"></span><b>Skills</b><span>Training that leads to work</span></li>
+              <li><span class="flow-node" aria-hidden="true"></span><b>Finance</b><span>Assets, credit, financial literacy</span></li>
+              <li><span class="flow-node" aria-hidden="true"></span><b>Enterprise</b><span>Own-account work and small firms</span></li>
+              <li><span class="flow-node" aria-hidden="true"></span><b>Market</b><span>Customers, buyers, platforms</span></li>
+              <li><span class="flow-node flow-node--goal" aria-hidden="true"></span><b>Income</b><span>Steady and dignified</span></li>
+            </ol>
+            <figcaption class="flow-support flow-support--dual">
+              <span class="fs-line fs-line--inclusion">Inclusion</span> women, youth and small producers at every step
+              <span class="fs-line fs-line--green">Sustainability</span> green technologies and practices built in
+            </figcaption>
+          </figure>
+
+          <div class="theme-body">
+            <details class="work-accordion work-accordion--scope reveal" open>
+              <summary><span class="work-accordion-label">What we work on</span></summary>
+              <div class="work-accordion-body">
+                <div class="scope-grid scope-grid--4">
+                  <div><h4>Skills and jobs</h4><ul><li>Green skills</li><li>Vocational and driver training</li><li>Digital skills</li></ul></div>
+                  <div><h4>Finance and inclusion</h4><ul><li>Financial literacy</li><li>Access to assets and finance</li><li>Digital inclusion</li></ul></div>
+                  <div><h4>Enterprise</h4><ul><li>Women-led enterprise</li><li>Entrepreneurship support</li><li>Productive technologies</li></ul></div>
+                  <div><h4>Markets and mobility</h4><ul><li>Inclusive value chains</li><li>Sustainable mobility</li><li>Rural logistics</li></ul></div>
+                </div>
+              </div>
+            </details>
+            <figure class="theme-photo media-reveal">
+              <img src="assets/programme/green-inclusive-economy-electric-mobility.webp" alt="A smiling woman in a brown jacket stands beside a blue electric auto-rickshaw, holding up an identity card." width="1280" height="1707" loading="lazy" />
+              <figcaption class="tech-caption"><span class="tc-mark" aria-hidden="true"></span> An electric auto-rickshaw driver with her ID card.</figcaption>
+            </figure>
+          </div>
+
+          <!-- Permanently Visible Work in Practice -->
+          <div class="practice-block reveal">
+            <div class="practice-block-header">Work in practice</div>
+            <div class="practice-cols">
+              <div class="practice-col">
+                <h4 class="practice-label practice-label--current">Current and recent work</h4>
+                <ul class="practice-list">
+                  <li><b>Swavalambi Stree</b><span class="pl-meta">Bengaluru and Mysore · Phase II ongoing</span><p>Women from low-income urban communities become independent electric auto-rickshaw drivers, through vehicle access, skill building and ecosystem support.</p></li>
+                  <li><b>Mahila Shakti</b><span class="pl-meta">Bengaluru · Phase II ongoing</span><p>A women-centric enterprise and resilience initiative building green, dignified livelihoods for women.</p></li>
+                  <li><b>Digital and financial literacy</b><span class="pl-meta">Gujarat · 2025</span><p>Training 60 master trainers to take digital and financial literacy to 500 participants.</p></li>
+                </ul>
+              </div>
+              <div class="practice-col">
+                <h4 class="practice-label">Earlier experience in India</h4>
+                <ul class="practice-list">
+                  <li><b>Gravity goods ropeways</b><span class="pl-meta">Peren, Nagaland · 2018–19</span><p>Setting up and operating gravity goods ropeways to move goods in hill areas, a practical rural logistics technology.</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Work In Action (Stories) -->
+    <section id="work-in-action" class="section section--sand stories-section" aria-labelledby="wia-title">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-num" data-num="03" aria-hidden="true"></span>
+          <div class="sec-head-body">
+            <p class="eyebrow">Work in action</p>
+            <h2 id="wia-title">How the pieces come together on the ground.</h2>
+            <p class="lead">Six stories from Practical Action’s work in India. Each shows the problem, what was done, and which of the six elements made it work. Targets are shown where the programme set them.</p>
+          </div>
+        </div>
+
+        <ol class="ing-legend reveal" aria-hidden="true">
+          <li>People</li><li>Institutions</li><li>Technology</li><li>Enterprise</li><li>Finance</li><li>Evidence</li>
+        </ol>
+
+        <div class="story-list">
+          <article class="story reveal">
+            <div class="story-meta">
+              <span class="story-num" data-num="01" aria-hidden="true"></span>
+              <p class="story-theme">Climate Resilience</p>
+              <p class="story-place">Akola, Jalgaon and Nanded-Waghala, Maharashtra</p>
+              <p class="story-status">Ongoing · to 2028</p>
+            </div>
+            <div class="story-main">
+              <h3>SHIELD: cities built to handle heat and water stress</h3>
+              <div class="story-cols">
+                <div><p class="kicker">Challenge</p><p>Growing cities face extreme heat and water stress, and the poorest households carry most of the exposure.</p></div>
+                <div><p class="kicker">Approach</p><p>Nature-based solutions, decentralised water systems and community-managed assets, planned with municipal bodies and women-led self-help groups.</p></div>
+              </div>
+              <details class="acc">
+                <summary><span class="acc-icon" aria-hidden="true"></span>How the system worked, and why it matters</summary>
+                <div class="acc-body">
+                  <div class="story-cols">
+                    <div><p class="kicker">How the system worked</p><p>Women-led SHGs manage community assets. Municipal bodies bring the mandate and public systems. Nature-based and decentralised water technologies do the physical work, with climate and social outcomes measured from the start.</p></div>
+                    <div><p class="kicker">Why it matters</p><p>It treats resilience as city infrastructure that communities help run, an approach designed to scale from one city to many.</p></div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="story-side">
+              <ul class="ingredients"><li class="on">People</li><li class="on">Institutions</li><li class="on">Technology</li><li class="off" aria-hidden="true">Enterprise</li><li class="off" aria-hidden="true">Finance</li><li class="on">Evidence</li></ul>
+              <p class="callout"><span>Target</span>15,800 households directly</p>
+            </div>
+          </article>
+
+          <article class="story reveal">
+            <div class="story-meta">
+              <span class="story-num" data-num="02" aria-hidden="true"></span>
+              <p class="story-theme">Climate Resilience</p>
+              <p class="story-place">Bhadrak, coastal Odisha</p>
+              <p class="story-status">Ongoing · to 2028</p>
+            </div>
+            <div class="story-main">
+              <h3>Mangroves as a climate buffer and a livelihood</h3>
+              <div class="story-cols">
+                <div><p class="kicker">Challenge</p><p>Coastal households live with storm and erosion risk, and few sources of steady income.</p></div>
+                <div><p class="kicker">Approach</p><p>Mangrove restoration led by women’s collectives, working with the district administration and Forest Department, and linked to sustainable livelihoods.</p></div>
+              </div>
+              <details class="acc">
+                <summary><span class="acc-icon" aria-hidden="true"></span>How the system worked, and why it matters</summary>
+                <div class="acc-body">
+                  <div class="story-cols">
+                    <div><p class="kicker">How the system worked</p><p>Women’s collectives lead planting and protection. District and forest institutions provide the mandate and land. Restored mangroves act as a natural barrier, and livelihood links give households a reason to keep them.</p></div>
+                    <div><p class="kicker">Why it matters</p><p>When an ecosystem protects people and also pays them, communities have a lasting stake in looking after it.</p></div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="story-side">
+              <ul class="ingredients"><li class="on">People</li><li class="on">Institutions</li><li class="on">Technology</li><li class="on">Enterprise</li><li class="off" aria-hidden="true">Finance</li><li class="off" aria-hidden="true">Evidence</li></ul>
+              <p class="callout"><span>Target</span>50 ha of mangroves restored, benefiting about 4,500 residents</p>
+            </div>
+          </article>
+
+          <article class="story reveal">
+            <div class="story-meta">
+              <span class="story-num" data-num="03" aria-hidden="true"></span>
+              <p class="story-theme">Food Systems</p>
+              <p class="story-place">Bargarh, Kandhamal, Dhenkanal and Rayagada, Odisha</p>
+              <p class="story-status">2025–26</p>
+            </div>
+            <div class="story-main">
+              <h3>Measuring where the harvest is lost</h3>
+              <div class="story-cols">
+                <div><p class="kicker">Challenge</p><p>Tomato, strawberry and mango growers lose value between harvest and sale, and nobody had measured exactly where.</p></div>
+                <div><p class="kicker">Approach</p><p>Structured loss assessment across four districts, using methods supported by Wageningen University, turning field evidence into practical solutions.</p></div>
+              </div>
+              <details class="acc">
+                <summary><span class="acc-icon" aria-hidden="true"></span>How the system worked, and why it matters</summary>
+                <div class="acc-body">
+                  <div class="story-cols">
+                    <div><p class="kicker">How the system worked</p><p>Field evidence from farmers and the chain is gathered with a tested methodology, so losses can be compared across crops and districts. Solutions are then judged on whether they are commercially viable for farmers, not only technically possible.</p></div>
+                    <div><p class="kicker">Why it matters</p><p>Starting with measurement means money and effort go to the points where value is actually lost, rather than where it is assumed to be.</p></div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="story-side">
+              <ul class="ingredients"><li class="on">People</li><li class="off" aria-hidden="true">Institutions</li><li class="on">Technology</li><li class="on">Enterprise</li><li class="off" aria-hidden="true">Finance</li><li class="on">Evidence</li></ul>
+              <p class="callout"><span>Crops</span>Tomato · strawberry · mango</p>
+            </div>
+          </article>
+
+          <article class="story reveal">
+            <div class="story-meta">
+              <span class="story-num" data-num="04" aria-hidden="true"></span>
+              <p class="story-theme">Energy and WASH</p>
+              <p class="story-place">Dhenkanal and Angul, Odisha</p>
+              <p class="story-status">2014–19</p>
+            </div>
+            <div class="story-main">
+              <h3>Project Nirmal: sanitation for a whole town, not one toilet at a time</h3>
+              <div class="story-cols">
+                <div><p class="kicker">Challenge</p><p>Towns needed a sanitation system that works for the whole city, including what happens after the toilet: emptying, transport and treatment.</p></div>
+                <div><p class="kicker">Approach</p><p>Demonstrated appropriate, sustainable sanitation service delivery in two municipalities, alongside solid waste facilities.</p></div>
+              </div>
+              <details class="acc">
+                <summary><span class="acc-icon" aria-hidden="true"></span>How the system worked, and why it matters</summary>
+                <div class="acc-body">
+                  <div class="story-cols">
+                    <div><p class="kicker">How the system worked</p><p>The service was built around the two municipalities, and the sanitation chain was treated as one system. Evidence from both towns was shaped to inform support frameworks at state and national level.</p></div>
+                    <div><p class="kicker">Why it matters</p><p>A demonstration built from day one to inform policy, so the model could travel well beyond two towns.</p></div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="story-side">
+              <ul class="ingredients"><li class="on">People</li><li class="on">Institutions</li><li class="on">Technology</li><li class="off" aria-hidden="true">Enterprise</li><li class="off" aria-hidden="true">Finance</li><li class="on">Evidence</li></ul>
+              <p class="callout"><span>Scale</span>City-wide, in two municipalities</p>
+            </div>
+          </article>
+
+          <article class="story reveal">
+            <div class="story-meta">
+              <span class="story-num" data-num="05" aria-hidden="true"></span>
+              <p class="story-theme">Green and Inclusive Economy</p>
+              <p class="story-place">Bengaluru and Mysore</p>
+              <p class="story-status">Phase II ongoing</p>
+            </div>
+            <div class="story-main">
+              <h3>Swavalambi Stree: women in the driver’s seat of green mobility</h3>
+              <div class="story-cols">
+                <div><p class="kicker">Challenge</p><p>Women from low-income urban communities are kept out of well-paid mobility work by gender norms and a lack of access to vehicles and training.</p></div>
+                <div><p class="kicker">Approach</p><p>Access to electric vehicles, skill building with driving schools, and ecosystem support so women can earn as independent e-auto drivers.</p></div>
+              </div>
+              <details class="acc">
+                <summary><span class="acc-icon" aria-hidden="true"></span>How the system worked, and why it matters</summary>
+                <div class="acc-body">
+                  <div class="story-cols">
+                    <div><p class="kicker">How the system worked</p><p>Women drivers at the centre. Driving schools and a local partner provide training. Vehicle access removes the biggest financial barrier. Electric vehicles make the livelihood part of the green transition.</p></div>
+                    <div><p class="kicker">Why it matters</p><p>It links the energy transition directly to women’s income, and challenges norms about who drives for a living.</p></div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="story-side">
+              <ul class="ingredients"><li class="on">People</li><li class="on">Institutions</li><li class="on">Technology</li><li class="on">Enterprise</li><li class="on">Finance</li><li class="off" aria-hidden="true">Evidence</li></ul>
+              <p class="callout"><span>Target</span>Phase I: 100 women. Phase II: 75 women</p>
+            </div>
+          </article>
+
+          <article class="story reveal">
+            <div class="story-meta">
+              <span class="story-num" data-num="06" aria-hidden="true"></span>
+              <p class="story-theme">Food Systems</p>
+              <p class="story-place">Madhya Pradesh</p>
+              <p class="story-status">Completed 2025</p>
+            </div>
+            <div class="story-main">
+              <h3>A common yardstick for regenerative agriculture</h3>
+              <div class="story-cols">
+                <div><p class="kicker">Challenge</p><p>Regenerative practices are spreading, but their impact is measured in different ways, or not at all.</p></div>
+                <div><p class="kicker">Approach</p><p>A monitoring, reporting and verification (MRV) framework with standardised methods, developed with IDH for the Regenerative Production Landscape Collaborative.</p></div>
+              </div>
+              <details class="acc">
+                <summary><span class="acc-icon" aria-hidden="true"></span>How the system worked, and why it matters</summary>
+                <div class="acc-body">
+                  <div class="story-cols">
+                    <div><p class="kicker">How the system worked</p><p>Developed in collaboration with IDH and partners, the framework sets what to measure and how, so results from farmers’ fields can be compared and verified across the landscape.</p></div>
+                    <div><p class="kicker">Why it matters</p><p>Practices only scale when their impact can be shown consistently. A shared framework is what makes that possible.</p></div>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="story-side">
+              <ul class="ingredients"><li class="on">People</li><li class="on">Institutions</li><li class="off" aria-hidden="true">Technology</li><li class="off" aria-hidden="true">Enterprise</li><li class="off" aria-hidden="true">Finance</li><li class="on">Evidence</li></ul>
+              <p class="callout"><span>Output</span>A standardised MRV framework</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Break -->
+    <figure class="photo-break">
+      <div class="photo-break-media media-reveal">
+        <img src="assets/programme/livelihood-carpenter.webp" alt="A carpenter with a white beard squats at the front of his workshop, planks and a mallet at his feet, smiling as he talks to someone out of frame." width="1280" height="1704" loading="lazy" />
+      </div>
+      <figcaption class="photo-break-text">
+        <p class="pb-statement reveal">Good solutions are the ones people keep using long after a project ends.</p>
+        <p class="pb-note reveal">That is the test behind every stage of how we work: will the people and institutions closest to the problem be able to run it, repair it and pay for it?</p>
+      </figcaption>
+    </figure>
+
+    <!-- Impact Section -->
+    <section id="impact" class="section impact-section" aria-labelledby="impact-title">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-num" data-num="04" aria-hidden="true"></span>
+          <div class="sec-head-body">
+            <p class="eyebrow">Impact</p>
+            <h2 id="impact-title">We measure change, not activity.</h2>
+            <p class="lead">Our programmes are designed around outcomes: stronger livelihoods, greater resilience, more equal participation and local systems that keep working after a project ends. We measure change at more than one level — direct benefit to people, wider benefit within households and communities, and the institutional adoption or replication that helps practical solutions travel further.</p>
+          </div>
+        </div>
+
+        <div class="impact-architecture reveal" aria-label="Four outcome areas">
+          <div class="impact-centre"><span>Change we measure</span><b>Practical solutions<br/>→ lasting impact</b></div>
+          <article class="impact-outcome outcome-1"><span>01</span><h3>Livelihoods improvements</h3><p>Income, enterprise performance, productive assets, financial capability and more secure work.</p></article>
+          <article class="impact-outcome outcome-2"><span>02</span><h3>Climate resilience</h3><p>Better capacity to anticipate, absorb and recover from heat, water stress and other shocks.</p></article>
+          <article class="impact-outcome outcome-3"><span>03</span><h3>Gender equality and social inclusion</h3><p>Confidence, voice, mobility, decision-making power and equitable access to opportunity.</p></article>
+          <article class="impact-outcome outcome-4"><span>04</span><h3>Enabling ecosystems</h3><p>Stronger institutions, partnerships, services and delivery models that can sustain, replicate and scale change.</p></article>
+        </div>
+
+        <div class="impact-snapshot reveal">
+          <div class="impact-snapshot-head">
+            <p class="kicker">Cumulative benefit + selected outcome indicators</p>
+            <p>These figures combine cumulative direct beneficiaries across PAF’s programme portfolio with a conservative estimate of household-level derived benefit and selected outcome indicators. Replication and systems-change evidence is shown separately, rather than being converted into an inflated beneficiary total.</p>
+          </div>
+          <div class="impact-metrics">
+            <div class="impact-metric"><strong>8,458</strong><span>people recorded as direct beneficiaries of PAF programmes since inception</span></div>
+            <div class="impact-metric"><strong>42,000+</strong><span>people estimated to have derived wider household-level benefit through direct programme participants</span></div>
+            <div class="impact-metric"><strong>292</strong><span>people reporting improved indoor living conditions through passive cooling interventions</span></div>
+            <div class="impact-metric"><strong>91%</strong><span>of women in Swavalambi Stree reporting financial independence and greater contribution to household income</span></div>
+          </div>
+        </div>
+
+        <div class="impact-scale reveal" aria-label="How impact travels beyond direct beneficiaries">
+          <div class="impact-scale-copy">
+            <p class="kicker">From demonstration to wider change</p>
+            <h3>Not every impact should be converted into a beneficiary number.</h3>
+            <p>Some of PAF’s strongest contribution comes when a practical model is taken up beyond the original project. We track that separately as institutional adoption, replication and systems influence.</p>
+            <p class="impact-scale-note">This keeps the impact story ambitious without counting people we cannot yet verify.</p>
+          </div>
+          <div class="impact-scale-example">
+            <p class="impact-scale-tag">Nirmal · Odisha</p>
+            <div class="scale-flow" aria-label="Nirmal replication pathway">
+              <div class="scale-node scale-node--start"><strong>2</strong><span>FSTPs demonstrated through the programme</span></div>
+              <div class="scale-arrow" aria-hidden="true">→</div>
+              <div class="scale-node scale-node--end"><strong>121</strong><span>additional locations where the Government of Odisha subsequently expanded FSTPs</span></div>
+            </div>
+            <p class="scale-claim"><b>What we claim:</b> a demonstration-to-scale story and a strong systems-change signal. We do not add the population of those 121 locations to PAF’s beneficiary total unless service-population evidence and contribution are independently validated.</p>
+          </div>
+        </div>
+
+        <div class="impact-layers reveal" aria-label="PAF impact accounting layers">
+          <div class="impact-layer"><span>01</span><h4>Direct benefit</h4><p>People directly supported through programme interventions and services.</p></div>
+          <div class="impact-layer"><span>02</span><h4>Household benefit</h4><p>Wider benefit reasonably derived through direct participants, reported as an estimate.</p></div>
+          <div class="impact-layer"><span>03</span><h4>Community benefit</h4><p>Shared infrastructure, services or public goods where the service population can be evidenced.</p></div>
+          <div class="impact-layer"><span>04</span><h4>Systems change</h4><p>Institutional adoption, replication, policy or delivery-model change, tracked separately from beneficiary totals.</p></div>
+        </div>
+
+        <div class="outcome-harvest reveal">
+          <div class="outcome-harvest-intro">
+            <p class="kicker">Outcome harvesting</p>
+            <h3>Some changes are best understood as a shift in behaviour, power or systems.</h3>
+            <p>Alongside quantitative indicators, we capture and verify significant changes that show how a programme is influencing people, institutions and the enabling environment.</p>
+          </div>
+          <div class="harvest-grid">
+            <article class="harvest-card">
+              <p class="harvest-tag">Livelihoods · Swavalambi Stree</p>
+              <blockquote>Women recorded a 150% increase in average monthly income, strengthening their ability to meet financial needs and invest in future livelihood opportunities.</blockquote>
+              <span class="harvest-proof">Income + financial security</span>
+            </article>
+            <article class="harvest-card">
+              <p class="harvest-tag">Gender equality · Swavalambi Stree</p>
+              <blockquote>Women entered a traditionally male-dominated mobility sector, demonstrating a shift in occupational roles and gender norms.</blockquote>
+              <span class="harvest-proof">Norms + agency</span>
+            </article>
+            <article class="harvest-card">
+              <p class="harvest-tag">Climate resilience · SHIELD</p>
+              <blockquote>Municipal engagement improved the enabling environment for adoption of urban climate resilience solutions across three municipalities.</blockquote>
+              <span class="harvest-proof">Institutions + scale</span>
+            </article>
+            <article class="harvest-card">
+              <p class="harvest-tag">Enabling ecosystems · IDH MRV</p>
+              <blockquote>Seven partner institutions strengthened their capacity to monitor and report regenerative landscape outcomes through MRV systems.</blockquote>
+              <span class="harvest-proof">Evidence + institutional capacity</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="impact-path reveal" aria-label="How evidence becomes better delivery">
+          <div class="impact-path-copy">
+            <p class="kicker">Learning loop</p>
+            <h3>Measure. Learn. Adapt. Verify.</h3>
+            <p>Evidence is useful only when it changes what we do. We use monitoring data and outcome harvesting to improve delivery while work is underway, and to build a stronger case for what should be sustained or scaled.</p>
+          </div>
+          <ol class="impact-path-steps">
+            <li><span>01</span><b>Baseline</b><small>Know where we are starting</small></li>
+            <li><span>02</span><b>Monitor</b><small>Track progress and inclusion</small></li>
+            <li><span>03</span><b>Harvest</b><small>Capture meaningful change</small></li>
+            <li><span>04</span><b>Adapt</b><small>Improve delivery in real time</small></li>
+            <li><span>05</span><b>Verify</b><small>Make outcomes credible</small></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="section section--sand partners-section" aria-labelledby="partners-title">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-num" data-num="05" aria-hidden="true"></div>
+          <div>
+            <p class="eyebrow">Partners</p>
+            <h2 id="partners-title">Partnership is how practical solutions travel further.</h2>
+            <p class="lead">We work with civil society organisations, foundations, businesses and global institutions to combine local insight, technical depth, resources and routes to scale.</p>
+          </div>
+        </div>
+
+        <div class="partners-grid reveal" aria-label="Selected partners and collaborators">
+          <a class="partner-card" href="https://aidmi.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit AIDMI website">
+            <div class="partner-logo-stage">
+              <img src="assets/partners/aidmi.jpg" alt="AIDMI" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+              <span class="partner-logo-fallback" hidden>AIDMI</span>
+            </div>
+            <div class="partner-card-copy"><strong>AIDMI</strong><span>All India Disaster Mitigation Institute</span></div>
+          </a>
+
+          <a class="partner-card partner-card--text" href="https://www.osvswa.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit OSVSWA website">
+            <div class="partner-logo-stage">
+              <img src="assets/partners/osvswa.jpg" alt="OSVSWA" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+              <span class="partner-logo-fallback" hidden>OSVSWA</span>
+            </div>
+            <div class="partner-card-copy"><strong>OSVSWA</strong><span>Orissa State Volunteers and Social Workers Association</span></div>
+          </a>
+
+          <a class="partner-card" href="https://www.unicef.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit UNICEF website">
+            <div class="partner-logo-stage">
+              <img src="https://www.unicef.ch/sites/default/files/styles/primer_content_xl/public/media/2021/10/UNICEF_Logo_Sign_RGB_EN_Trasp_Cyan_Short.png.webp?itok=gmIfZS-l" alt="UNICEF" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+              <span class="partner-logo-fallback" hidden>UNICEF</span>
+            </div>
+            <div class="partner-card-copy"><strong>UNICEF</strong><span>United Nations Children’s Fund</span></div>
+          </a>
+
+          <a class="partner-card" href="https://www.goto.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GoTo website">
+            <div class="partner-logo-stage">
+              <img src="https://res.cloudinary.com/brandpad/image/upload/c_scale%2Cf_auto%2Cw_600/v1742314187/32260/goto_rgb_black_yellow_ccbe50b9" alt="GoTo" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+              <span class="partner-logo-fallback" hidden>GoTo</span>
+            </div>
+            <div class="partner-card-copy"><strong>GoTo</strong><span>Social impact partner</span></div>
+          </a>
+
+          <a class="partner-card" href="https://boschindiafoundation.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Bosch India Foundation website">
+            <div class="partner-logo-stage">
+              <img src="https://www.smetgroup.com/storage/app/media/uploaded-files/Bosch_symbol_logo_black_red_EN.png" alt="Bosch" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+              <span class="partner-logo-fallback" hidden>BOSCH</span>
+            </div>
+            <div class="partner-card-copy"><strong>Bosch India Foundation</strong><span>Foundation partner</span></div>
+          </a>
+
+          <a class="partner-card" href="https://saath.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit SAATH website">
+            <div class="partner-logo-stage">
+              <img src="https://saath.org/public/assets/images/Logo.png" alt="SAATH Charitable Trust" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+              <span class="partner-logo-fallback" hidden>SAATH</span>
+            </div>
+            <div class="partner-card-copy"><strong>SAATH</strong><span>Saath Charitable Trust</span></div>
+          </a>
+
+          <a class="partner-card" href="https://www.sbilife.co.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit SBI Life website">
+            <div class="partner-logo-stage">
+              <img src="https://www.sbilife.co.in/documents/d/sbil/sbi-life-mini-logotype" alt="SBI Life" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+              <span class="partner-logo-fallback" hidden>SBI Life</span>
+            </div>
+            <div class="partner-card-copy"><strong>SBI Life</strong><span>Corporate partner</span></div>
+          </a>
+
+          <a class="partner-card" href="https://arghyam.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit Arghyam website">
+            <div class="partner-logo-stage">
+              <span class="partner-logo-fallback">Arghyam</span>
+            </div>
+            <div class="partner-card-copy"><strong>Arghyam</strong><span>Water and systems partner</span></div>
+          </a>
+
+          <a class="partner-card" href="https://corporate.apollotyres.com/sustainability-and-ethics/community-development-csr/" target="_blank" rel="noopener noreferrer" aria-label="Visit Apollo Tyres Foundation information page">
+            <div class="partner-logo-stage">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Apollo_Tyres_Ltd_Logo.jpg" alt="Apollo Tyres" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+              <span class="partner-logo-fallback" hidden>Apollo Tyres</span>
+            </div>
+            <div class="partner-card-copy"><strong>Apollo Tyres Foundation</strong><span>CSR implementation foundation</span></div>
+          </a>
+        </div>
+
+        <p class="partner-section-note reveal">Selected partners and collaborators. The nature and period of each relationship varies by programme.</p>
+      </div>
+    </section>
+
+    <!-- How We Work -->
+    <section id="how-we-work" class="section how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-num" data-num="06" aria-hidden="true"></span>
+          <div class="sec-head-body">
+            <p class="eyebrow">How we work</p>
+            <h2 id="how-title">From a local challenge to a practical solution that lasts.</h2>
+            <p class="lead">One continuous pathway, from diagnosis to wider adoption. The aim is not a bigger project. It is a better outcome that local institutions can carry forward.</p>
+          </div>
+        </div>
+
+        <ol class="pathway">
+          <li class="stage reveal"><span class="stage-dot" aria-hidden="true"></span><span class="stage-no">01</span><h3>Understand</h3><p>Start with the people, institutions and markets involved, and the data on risk and bottlenecks.</p><ul><li>Community and citizen insight</li><li>Service, livelihood and market diagnostics</li><li>Risk and bottleneck analysis</li></ul></li>
+          <li class="stage reveal"><span class="stage-dot" aria-hidden="true"></span><span class="stage-no">02</span><h3>Co-design</h3><p>Agree the outcome, the roles and the priorities with communities, partners and public institutions.</p><ul><li>Shared outcome and roles</li><li>Practical priorities</li><li>Coordination arrangements</li></ul></li>
+          <li class="stage reveal"><span class="stage-dot" aria-hidden="true"></span><span class="stage-no">03</span><h3>Demonstrate</h3><p>Test the solution in real settings and gather evidence on adoption, inclusion and economics.</p><ul><li>Field pilots and living labs</li><li>Technology adapted to context</li><li>Baselines and early results</li></ul></li>
+          <li class="stage reveal"><span class="stage-dot" aria-hidden="true"></span><span class="stage-no">04</span><h3>Deliver</h3><p>Run the programme with monitoring, learning and course-correction built in.</p><ul><li>Programme management</li><li>Frontline skills, tools and routines</li><li>Adaptive management</li></ul></li>
+          <li class="stage reveal"><span class="stage-dot" aria-hidden="true"></span><span class="stage-no">05</span><h3>Strengthen</h3><p>Build the capability, financing and operating arrangements that let local institutions carry on.</p><ul><li>Partner and institutional capability</li><li>Operating and financing models</li><li>Local ownership</li></ul></li>
+          <li class="stage reveal"><span class="stage-dot stage-dot--goal" aria-hidden="true"></span><span class="stage-no">06</span><h3>Scale and replicate</h3><p>Adapt what works for new places, and connect it to funding, partnership and enterprise pathways.</p><ul><li>Adaptation across locations</li><li>Policy and practitioner learning</li><li>Funding and market pathways</li></ul></li>
+        </ol>
+
+        <div id="technology" class="idea idea--tech reveal">
+          <div class="idea-text">
+            <p class="idea-label"><span>A</span>Technology</p>
+            <h3>Appropriate where it fits. Frontier where it helps.</h3>
+            <p>We are not tied to one kind of technology. We choose by usefulness, context, maintainability and impact, never by novelty. Sometimes the right answer is a well-run community nursery. Sometimes it is sensors, remote sensing or digital early warning. Often it is a mix.</p>
+            <ul class="criteria">
+              <li><b>Useful</b> solves the problem people actually have</li>
+              <li><b>Fits the context</b> works with local skills, supply and conditions</li>
+              <li><b>Maintainable</b> can be run and repaired locally</li>
+              <li><b>Measurable</b> its impact can be shown</li>
+            </ul>
+          </div>
+          <figure class="spectrum">
+            <div class="spectrum-ends"><span>Appropriate technology</span><span>Frontier technology</span></div>
+            <div class="spectrum-track" aria-hidden="true"><span class="spectrum-centre">Context and evidence decide</span></div>
+            <ol class="spectrum-points">
+              <li>Community nurseries and nature-based works</li>
+              <li>Solar lighting, pumping and micro-hydel</li>
+              <li>Decentralised water and sanitation</li>
+              <li>Digital tools and monitoring</li>
+              <li>Remote sensing and climate data</li>
+            </ol>
+            <figcaption class="fig-note">The range we choose from. The choice depends on the problem, not the other way round.</figcaption>
+          </figure>
+        </div>
+
+        <div id="coalitions" class="idea idea--coalition reveal">
+          <div class="idea-text">
+            <p class="idea-label"><span>B</span>Coalitions</p>
+            <h3>Shared outcome. Clear roles. A route to delivery.</h3>
+            <p>Complex problems need several organisations moving together. We help convene and structure partnerships so that everyone knows the outcome they are working towards, what they are responsible for, and how the work actually gets delivered.</p>
+          </div>
+          <figure class="ledger">
+            <p class="ledger-top"><span class="ledger-node" aria-hidden="true"></span>Shared outcome</p>
+            <dl class="ledger-rows">
+              <div><dt>Communities and local organisations</dt><dd>Define the need, co-own the solution</dd></div>
+              <div><dt>Public institutions</dt><dd>Mandate, systems and scale</dd></div>
+              <div><dt>Funders and CSR</dt><dd>Capital and long-term commitment</dd></div>
+              <div><dt>Businesses and markets</dt><dd>Technology, customers and jobs</dd></div>
+              <div><dt>Technical and research partners</dt><dd>Methods and specialist knowledge</dd></div>
+              <div class="ledger-paf"><dt>Practical Action Foundation</dt><dd>Design, convening, delivery and evidence</dd></div>
+            </dl>
+            <p class="ledger-bottom">Route to delivery <span aria-hidden="true">→</span></p>
+          </figure>
+        </div>
+
+        <div id="csr" class="idea idea--csr reveal">
+          <div class="idea-text">
+            <p class="idea-label"><span>C</span>CSR and responsible business</p>
+            <h3>From commitment to community outcome.</h3>
+            <p>Companies and foundations bring ambition and capital. We turn that into programmes that work on the ground: designed with communities, delivered in the field, and measured credibly. Our role is programme design, delivery, the community interface, technical implementation, monitoring and learning.</p>
+          </div>
+          <figure class="csr-flow">
+            <ol class="flow flow--5 flow--compact">
+              <li><span class="flow-node" aria-hidden="true"></span><b>Commitment</b><span>Company or foundation</span></li>
+              <li class="paf"><span class="flow-node" aria-hidden="true"></span><b>Programme design</b><span>With communities</span></li>
+              <li class="paf"><span class="flow-node" aria-hidden="true"></span><b>Delivery</b><span>In the field</span></li>
+              <li class="paf"><span class="flow-node" aria-hidden="true"></span><b>Evidence</b><span>Measured and verified</span></li>
+              <li><span class="flow-node flow-node--goal" aria-hidden="true"></span><b>Community outcome</b><span>Change that lasts</span></li>
+            </ol>
+            <figcaption class="paf-bracket"><span>Where Practical Action Foundation works</span></figcaption>
+          </figure>
+        </div>
+
+        <div id="evidence" class="idea idea--evidence reveal">
+          <div class="idea-text">
+            <p class="idea-label"><span>D</span>Evidence, MEL and MRV</p>
+            <h3>Build evidence into delivery, not around it.</h3>
+            <p>We establish baselines, track progress, harvest outcomes and use learning to adjust delivery while programmes are running. For climate and environmental work, MRV adds the discipline needed to make outcomes transparent and verifiable.</p>
+            <a class="inline-impact-link" href="#impact">See how we measure impact <span aria-hidden="true">→</span></a>
+          </div>
+          <figure class="loop">
+            <svg class="loop-svg" viewBox="0 0 320 320" role="img" aria-labelledby="loop-t2">
+              <title id="loop-t2">A learning loop: evidence leads to learning, learning to adaptation, adaptation to better delivery, which produces new evidence.</title>
+              <defs>
+                <marker id="loop-arrow-2" markerWidth="7" markerHeight="7" refX="7" refY="5" orient="auto" viewBox="0 0 10 10">
+                  <path class="loop-arrowhead" d="M0 0 L10 5 L0 10 z"></path>
+                </marker>
+              </defs>
+              <path class="loop-arc" d="M182.9 52.4 A110 110 0 0 1 267.6 137.1" style="marker-end:url(#loop-arrow-2)"></path>
+              <path class="loop-arc" d="M267.6 182.9 A110 110 0 0 1 182.9 267.6" style="marker-end:url(#loop-arrow-2)"></path>
+              <path class="loop-arc" d="M137.1 267.6 A110 110 0 0 1 52.4 182.9" style="marker-end:url(#loop-arrow-2)"></path>
+              <path class="loop-arc" d="M52.4 137.1 A110 110 0 0 1 137.1 52.4" style="marker-end:url(#loop-arrow-2)"></path>
+              <circle class="loop-node loop-node--accent" cx="160" cy="50" r="8"></circle>
+              <circle class="loop-node" cx="270" cy="160" r="8"></circle>
+              <circle class="loop-node" cx="160" cy="270" r="8"></circle>
+              <circle class="loop-node" cx="50" cy="160" r="8"></circle>
+              <text class="loop-label" x="160" y="84">Evidence</text>
+              <text class="loop-label loop-label--end" x="254" y="165">Learning</text>
+              <text class="loop-label" x="160" y="246">Adapt</text>
+              <text class="loop-label loop-label--start" x="66" y="165">Deliver better</text>
+            </svg>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Working With Public Institutions -->
+    <section id="public-institutions" class="section section--dark institutions" aria-labelledby="inst-title">
+      <div class="wrap">
+        <div class="sec-head sec-head--dark reveal">
+          <span class="sec-num" data-num="07" aria-hidden="true"></span>
+          <div class="sec-head-body">
+            <p class="eyebrow">Working with public institutions</p>
+            <h2 id="inst-title">Helping public programmes work better on the ground.</h2>
+            <p class="lead">Our role is practical and operational. We support priorities that public institutions have already set, at the level where delivery happens.</p>
+          </div>
+        </div>
+
+        <div class="inst-grid">
+          <ol class="tiers">
+            <li class="tier reveal">
+              <span class="tier-level">City and ULB</span>
+              <div>
+                <p>Service delivery in sanitation, heat and water resilience, waste and local infrastructure.</p>
+                <p class="tier-proof"><span>From experience</span>City-wide sanitation with Dhenkanal and Angul municipalities. Heat and water resilience with municipal bodies in three Maharashtra cities.</p>
+              </div>
+            </li>
+            <li class="tier reveal">
+              <span class="tier-level">District</span>
+              <div>
+                <p>Implementation, coordination across departments, frontline capability and risk preparedness.</p>
+                <p class="tier-proof"><span>From experience</span>Mangrove restoration alongside the district administration and Forest Department in Bhadrak.</p>
+              </div>
+            </li>
+            <li class="tier reveal">
+              <span class="tier-level">State</span>
+              <div>
+                <p>Technical assistance, programme design, training and implementation learning for state programmes.</p>
+                <p class="tier-proof"><span>From experience</span>Disaster risk reduction capacity from Panchayat to State in Odisha, and child-centred disaster planning with the state P&amp;RD Department.</p>
+              </div>
+            </li>
+            <li class="tier reveal">
+              <span class="tier-level">Practitioner networks</span>
+              <div>
+                <p>Tested approaches, tools and lessons shared across partners and geographies.</p>
+                <p class="tier-proof"><span>From experience</span>Early warning research with the Duryog Nivaran network. Sanitation learning shaped to inform state and national frameworks.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="engage reveal">
+            <p class="kicker">Forms of engagement</p>
+            <ul class="engage-list">
+              <li>Technical assistance</li>
+              <li>Programme design</li>
+              <li>Demonstration</li>
+              <li>Implementation support</li>
+              <li>Capacity strengthening</li>
+              <li>Frontline systems</li>
+              <li>Coordination</li>
+              <li>Evidence and learning</li>
+            </ul>
+            <p class="engage-note">Each engagement is shaped around a priority the institution has set, and designed to be handed back to the people who run the system every day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where We Work -->
+    <section id="where-we-work" class="section section--sand where where--editorial" aria-labelledby="where-title">
+      <div class="wrap">
+        <div class="where-footprint reveal">
+          <div class="where-footprint-copy">
+            <div class="where-footprint-kicker">
+              <span class="where-section-num" aria-hidden="true">08</span>
+              <p class="eyebrow eyebrow--where-dark">Where we work</p>
+            </div>
+            <h2 id="where-title">Multi-state experience. Grounded delivery.</h2>
+            <p class="lead lead--where-dark">Practical Action Foundation draws on multi-state programme, technical and partnership experience across India. We combine deeper engagement in selected geographies with specialist teams and local partnerships elsewhere.</p>
+          </div>
+          <ul class="where-reach-list" aria-label="Types of engagement across geographies">
+            <li><b>Programme delivery</b><span>With communities, local partners and public institutions in places where sustained implementation is needed.</span></li>
+            <li><b>Training and technical assistance</b><span>Practical support for frontline teams, city systems and wider public programmes.</span></li>
+            <li><b>Research and assessment</b><span>Climate risk, value chains, feasibility, baselines and evidence to guide action.</span></li>
+            <li><b>Advisory and design</b><span>Programme design, MEL and MRV approaches that can be adapted across contexts.</span></li>
+            <li><b>Partnerships</b><span>Local and specialist relationships that allow proven approaches to travel without requiring a permanent office in every state.</span></li>
+          </ul>
+        </div>
+
+        <div class="where-geo-grid">
+          <article class="where-geo-card reveal">
+            <span class="where-geo-index" aria-hidden="true">01</span>
+            <h3>Odisha</h3>
+            <p>Our deepest programme geography: city-wide sanitation in Dhenkanal and Angul, water and sanitation in Khurda, disaster preparedness from Panchayat to State, post-harvest research in four districts, and women-led mangrove restoration on the coast.</p>
+          </article>
+          <article class="where-geo-card reveal">
+            <span class="where-geo-index" aria-hidden="true">02</span>
+            <h3>West and South</h3>
+            <p>Urban heat and water resilience with three municipalities in Maharashtra. Women-led e-mobility livelihoods in Bengaluru and Mysore, and renewable-energy services in rural Karnataka.</p>
+          </article>
+          <article class="where-geo-card reveal">
+            <span class="where-geo-index" aria-hidden="true">03</span>
+            <h3>Across India</h3>
+            <p>Farmer collective assessment and gravity goods ropeways in Nagaland, MRV for regenerative agriculture in Madhya Pradesh, digital and financial literacy training in Gujarat, waste systems in Rajasthan, and climate-risk scoping in the Indian Himalayan region.</p>
+          </article>
+        </div>
+
+        <div class="where-federated-note reveal">
+          <h3>Deep where we need to be. Networked everywhere else.</h3>
+          <p>A few deep programme anchors, strong local partners, working relationships with public institutions and specialist technical teams allow proven solutions to travel while keeping delivery grounded in local realities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Board -->
+    <section id="board" class="section board" aria-labelledby="board-title">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-num" data-num="09" aria-hidden="true"></span>
+          <div class="sec-head-body">
+            <p class="eyebrow">Board</p>
+            <h2 id="board-title">Experienced stewardship.</h2>
+            <p class="lead">Our Board brings together philanthropy and corporate partnership, climate and natural-resource leadership, financial inclusion and development economics, and on-the-ground programme experience.</p>
+          </div>
+        </div>
+
+        <div class="board-grid">
+          <article class="person reveal">
+            <div class="board-photo"><img src="assets/board/sanjana-govindan.png" alt="Sanjana Govindan" /></div>
+            <div class="person-body">
+              <p class="eyebrow">Board Member</p>
+              <h3>Sanjana Govindan</h3>
+              <p class="expertise">Philanthropy <i>·</i> Governance <i>·</i> Strategic Partnerships</p>
+              <p>A corporate affairs and philanthropy leader with more than fifteen years across business, government, philanthropy and humanitarian action. Most recently Head of CSR, India at Goldman Sachs, leading its philanthropy portfolio and strategic partnerships. She brings depth in partnership building, governance, inclusive development, and how private capital can create long-term public value.</p>
+              <details class="acc bio">
+                <summary><span class="acc-icon" aria-hidden="true"></span>Full profile<span class="sr-only"> of Sanjana Govindan</span></summary>
+                <div class="acc-body">
+                  <p>At Goldman Sachs she led the firm’s philanthropy portfolio and strategic partnerships in India, including its flagship 10,000 Women initiative. Her career also includes leadership roles in entrepreneurship and ecosystem development at GAME, and in humanitarian innovation and institutional partnerships with the International Committee of the Red Cross.</p>
+                  <p>Sanjana has served on the boards of the Association of People with Disabilities and Friends of Women’s World Banking, contributing to strategy, governance, disability inclusion and financial inclusion. She is active in civic and community initiatives in Bengaluru and is co-founder of Bangalore Cat Squad.</p>
+                  <p class="profile-link-row"><a class="profile-link" href="https://www.linkedin.com/in/sanjanagovindan/" target="_blank" rel="noopener noreferrer" aria-label="View Sanjana Govindan on LinkedIn">View LinkedIn profile <span aria-hidden="true">↗</span></a></p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="person reveal">
+            <div class="board-photo"><img src="assets/board/nand-kishor-agrawal.jpg" alt="Nand Kishor Agrawal" /></div>
+            <div class="person-body">
+              <p class="eyebrow">Board Member</p>
+              <h3>Nand Kishor Agrawal</h3>
+              <p class="expertise">Climate <i>·</i> Natural Resources <i>·</i> Development Finance</p>
+              <p>A senior development professional with more than 25 years of leadership in natural resource management, climate resilience, biodiversity conservation and development finance. He has worked with governments, international organisations and communities across South Asia and the Hindu Kush Himalaya, including senior roles with ICIMOD and KfW, and now advises on large-scale resilience and restoration programmes.</p>
+              <details class="acc bio">
+                <summary><span class="acc-icon" aria-hidden="true"></span>Full profile<span class="sr-only"> of Nand Kishor Agrawal</span></summary>
+                <div class="acc-body">
+                  <p>At the International Centre for Integrated Mountain Development (ICIMOD) he led multidisciplinary work on resilient landscapes, ecosystem restoration, water security, climate adaptation, regional partnerships and climate investment planning. He has also held senior technical and strategic roles with the German Development Bank, KfW.</p>
+                  <p>He currently advises governments and international development partners on large programmes in climate resilience, forest landscape restoration, biodiversity conservation and natural resource governance. His experience in nature-based solutions, community-led conservation, and connecting science, policy, finance and implementation brings a strong environmental and climate perspective to the Board.</p>
+                  <p class="profile-link-row"><a class="profile-link" href="https://www.linkedin.com/in/nandagrawal/" target="_blank" rel="noopener noreferrer" aria-label="View Nand Kishor Agrawal on LinkedIn">View LinkedIn profile <span aria-hidden="true">↗</span></a></p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="person reveal">
+            <div class="board-photo"><img src="assets/board/usha-gopinath-menon.jpg" alt="Dr. Usha Gopinath Menon" /></div>
+            <div class="person-body">
+              <p class="eyebrow">Board Member</p>
+              <h3>Dr. Usha Gopinath Menon</h3>
+              <p class="expertise">Financial Inclusion <i>·</i> Gender Equality <i>·</i> Entrepreneurship</p>
+              <p>A development and financial inclusion specialist with more than three decades in the social sector and a research background in economics. Her work spans financial inclusion, women’s economic empowerment, entrepreneurship, and skill development, with programmes supported by UNICEF, the World Bank, ADB, UNDP, USAID, FCDO and others.</p>
+              <details class="acc bio">
+                <summary><span class="acc-icon" aria-hidden="true"></span>Full profile<span class="sr-only"> of Dr. Usha Gopinath Menon</span></summary>
+                <div class="acc-body">
+                  <p>Across leadership roles with organisations including Accion International, UNICEF and NASSCOM Foundation, and programmes backed by multilateral and bilateral institutions, Usha has designed and scaled initiatives involving women entrepreneurs, farmers, FPOs, financial literacy, market linkages and blended finance, in India, Southeast Asia and other international contexts.</p>
+                  <p>She holds a PhD in Economics and a Master’s degree in Development Economics and International Development from Bangalore University. Her mix of programme leadership, financial inclusion expertise and research strengthens the Board’s perspective on inclusive and sustainable development.</p>
+                  <p class="profile-link-row"><a class="profile-link" href="https://www.linkedin.com/in/dr-usha-gopinath-150820297/" target="_blank" rel="noopener noreferrer" aria-label="View Dr. Usha Gopinath Menon on LinkedIn">View LinkedIn profile <span aria-hidden="true">↗</span></a></p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="person reveal">
+            <div class="board-photo"><img src="assets/board/nihar-ranjan-ghadei.jpg" alt="Nihar Ranjan Ghadei" /></div>
+            <div class="person-body">
+              <p class="eyebrow">Board Member</p>
+              <h3>Nihar Ranjan Ghadei</h3>
+              <p class="expertise">Grassroots Insights <i>·</i> Institutional Relationships</p>
+              <p>Brings a grounded, field-informed understanding of how programmes work in practice, shaped by close engagement with communities, local institutions and government systems. His experience in WASH and local programme coordination gives the Board a practical perspective on community realities, stakeholder dynamics and the relationships needed to turn plans into sustained delivery.</p>
+              <details class="acc bio">
+                <summary><span class="acc-icon" aria-hidden="true"></span>Full profile<span class="sr-only"> of Nihar Ranjan Ghadei</span></summary>
+                <div class="acc-body">
+                  <p>His association with Practical Action’s work in India brings continuity and first-hand insight into the organisation’s operating context, including how community priorities, implementation constraints and local institutional systems shape programme outcomes.</p>
+                  <p>He contributes particular strengths in grassroots engagement and institutional relationship-building, helping connect programme priorities with community institutions, implementation partners and local government systems in a practical, grounded way.</p>
+                  <p class="profile-link-row"><a class="profile-link" href="https://www.linkedin.com/in/nihar-ranjan-ghadei-541b01a4/" target="_blank" rel="noopener noreferrer" aria-label="View Nihar Ranjan Ghadei on LinkedIn">View LinkedIn profile <span aria-hidden="true">↗</span></a></p>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner With Us -->
+    <section id="partner" class="section section--sand partner" aria-labelledby="partner-title">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-num" data-num="10" aria-hidden="true"></span>
+          <div class="sec-head-body">
+            <p class="eyebrow">Partner with us</p>
+            <h2 id="partner-title">Shared outcome. Clear roles. A route to delivery.</h2>
+            <p class="lead">We are most useful where a solution needs several actors to move together. These are the three pathways partners most often take with us.</p>
+          </div>
+        </div>
+
+        <div class="compliance-band reveal" aria-label="Practical Action Foundation institutional registrations">
+          <div class="compliance-intro">
+            <p class="eyebrow">Institutional standing</p>
+            <h3>Registered in India and set up for CSR partnerships.</h3>
+            <p>Practical Action Foundation is a Section 8 not-for-profit company. Key registrations are highlighted here for partners and due-diligence teams.</p>
+          </div>
+          <div class="compliance-items" role="list">
+            <div class="compliance-item" role="listitem"><span>01</span><b>Section 8 company</b><small>Not-for-profit company under the Companies Act, 2013</small></div>
+            <div class="compliance-item" role="listitem"><span>02</span><b>CSR-1 registered</b><small>Registered to undertake eligible CSR activities</small></div>
+            <div class="compliance-item" role="listitem"><span>03</span><b>12A registered</b><small>Income-tax registration</small></div>
+            <div class="compliance-item" role="listitem"><span>04</span><b>80G registered</b><small>Income-tax donation registration</small></div>
+          </div>
+          <p class="compliance-note">Registration and due-diligence documents can be shared with partners as required.</p>
+        </div>
+
+        <div class="pathways">
+          <article class="pw reveal">
+            <h3>Philanthropy and CSR</h3>
+            <dl class="pw-cols">
+              <div><dt>Partner brings</dt><dd>Capital and long-term commitment</dd></div>
+              <div><dt>PAF brings</dt><dd>Technical design, community delivery and evidence</dd></div>
+              <div class="pw-out"><dt>Together</dt><dd>Credible programmes with a pathway to scale</dd></div>
+            </dl>
+            <p class="pw-typical">Long-term programmes <i>·</i> demonstration and innovation <i>·</i> evidence generation <i>·</i> scaling pathways</p>
+          </article>
+
+          <article class="pw reveal">
+            <h3>Public institutions and multilaterals</h3>
+            <dl class="pw-cols">
+              <div><dt>Partner brings</dt><dd>Mandate, scale and public systems</dd></div>
+              <div><dt>PAF brings</dt><dd>Technical assistance, implementation support and learning</dd></div>
+              <div class="pw-out"><dt>Together</dt><dd>Stronger public delivery on the ground</dd></div>
+            </dl>
+            <p class="pw-typical">Technical assistance <i>·</i> programme design <i>·</i> capability strengthening <i>·</i> institutional systems</p>
+          </article>
+
+          <article class="pw reveal">
+            <h3>Business and responsible investors</h3>
+            <dl class="pw-cols">
+              <div><dt>Partner brings</dt><dd>Technology, markets and capital</dd></div>
+              <div><dt>PAF brings</dt><dd>Inclusive design, community interface and implementation</dd></div>
+              <div class="pw-out"><dt>Together</dt><dd>Responsible, measurable community value</dd></div>
+            </dl>
+            <p class="pw-typical">Inclusive value chains <i>·</i> livelihoods and employment <i>·</i> productive technologies <i>·</i> green enterprise</p>
+          </article>
+        </div>
+
+        <div class="cta reveal">
+          <svg class="cta-motif" viewBox="0 0 400 200" aria-hidden="true">
+            <path class="cta-line" d="M0 170 C 90 160, 120 90, 200 90 S 320 40, 400 20"></path>
+            <circle class="cta-dot" cx="200" cy="90" r="6"></circle>
+            <circle class="cta-dot" cx="330" cy="46" r="4"></circle>
+            <circle class="cta-dot" cx="90" cy="150" r="4"></circle>
+          </svg>
+          <div class="cta-text">
+            <p class="eyebrow">Working together</p>
+            <h2>From a shared challenge to a practical programme.</h2>
+            <p>Our partnerships start with a clearly defined outcome, bring together the right roles and capabilities, and build evidence and learning into delivery from the outset.</p>
+          </div>
+          <div class="cta-actions actions">
+            <a class="btn btn--dark" href="#our-work">Explore our work <span class="btn-arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--line" href="#impact">See our impact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="footer-name">Practical Action Foundation</p>
+        <p class="footer-desc">A development institution in India combining field understanding, technology, institutions, enterprise, finance and evidence to create practical solutions that last.</p>
+        <p class="footer-tag">Practical solutions. Lasting impact.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer">
+        <p class="footer-head">Explore</p>
+        <a href="#our-work">Our Work</a>
+        <a href="#impact">Impact</a>
+        <a href="#partners">Partners</a>
+        <a href="#work-in-action">Work in Action</a>
+        <a href="#how-we-work">How We Work</a>
+        <a href="#where-we-work">Where We Work</a>
+        <a href="#board">Board</a>
+        <a href="#partner">Partner With Us</a>
+      </nav>
+      <div class="footer-col">
+        <p class="footer-head">Themes</p>
+        <a href="#food-systems">Food Systems</a>
+        <a href="#climate-resilience">Climate Resilience</a>
+        <a href="#energy-wash">Energy and WASH</a>
+        <a href="#green-economy">Green and Inclusive Economy</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p class="footer-registration">Section 8 not-for-profit · CSR-1 registered · 12A · 80G</p>
+      <p>© Practical Action Foundation.</p>
+      <p class="footer-legal">
+        <span data-todo="privacy">Privacy</span>
+        <span data-todo="terms">Terms</span>
+        <span data-todo="registration">Registration details</span>
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  const scrim = document.querySelector('.nav-scrim');
+  const label = document.querySelector('.menu-toggle-label');
+
+  function setMenu(open){
+    if(!toggle || !nav) return;
+    toggle.setAttribute('aria-expanded', String(open));
+    nav.classList.toggle('is-open', open);
+    if(scrim) scrim.classList.toggle('is-visible', open);
+    if(label) label.textContent = open ? 'Close' : 'Menu';
+    document.body.classList.toggle('nav-open', open);
+  }
+
+  if(toggle) toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  if(scrim) scrim.addEventListener('click', () => setMenu(false));
+  if(nav) nav.addEventListener('click', e => { if(e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') setMenu(false); });
+
+  function onScroll(){
+    if(header) header.classList.toggle('is-scrolled', window.scrollY > 40);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Extended Smooth Scroll for Anchor Links with Header Offset
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#' || targetId === '') return;
+      const targetElem = document.querySelector(targetId);
+      if (targetElem) {
+        e.preventDefault();
+        const headerOffset = 84;
+        const elemPos = targetElem.getBoundingClientRect().top;
+        const offsetPos = elemPos + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPos,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  const keyRevealEls = [...document.querySelectorAll('.sec-head, .theme-head, .theme-body, .where-geo-card, .outcome-card, .impact-outcome, .harvest-card, .partner-card, .photo-break-text, .compliance-band, .practice-block')];
+  keyRevealEls.forEach((el, index) => {
+    if(!el.classList.contains('media-reveal')) el.classList.add('reveal');
+    el.style.transitionDelay = `${(index % 3) * 0.1}s`;
+  });
+
+  const revealEls = [...document.querySelectorAll('.reveal, .media-reveal')];
+  if('IntersectionObserver' in window){
+    const ro = new IntersectionObserver(entries => entries.forEach(en => {
+      if(!en.isIntersecting) return;
+      en.target.classList.add('is-visible');
+      ro.unobserve(en.target);
+    }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => ro.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
+  if('IntersectionObserver' in window && sections.length){
+    const so = new IntersectionObserver(entries => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if(!visible) return;
+      const id = visible.target.id;
+      navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + id));
+    }, { threshold: [.15, .35, .6], rootMargin: '-18% 0px -62% 0px' });
+    sections.forEach(s => so.observe(s));
+  }
+
+  document.querySelectorAll('.system-list li[data-node]').forEach(item => {
+    const sys = item.closest('.system');
+    const activate = () => { if(sys){ sys.dataset.active = item.dataset.node || ''; sys.classList.add('is-active'); } };
+    const clear = () => { if(sys){ sys.dataset.active = ''; sys.classList.remove('is-active'); } };
+    item.addEventListener('mouseenter', activate);
+    item.addEventListener('focusin', activate);
+    item.addEventListener('mouseleave', clear);
+    item.addEventListener('focusout', clear);
+  });
+})();
+</script>
+
+</body>
+</html>
